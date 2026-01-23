@@ -1,157 +1,100 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book Consultation | Ivy Training & Consulting UK</title>
-  <meta name="description" content="Book a consultation or enroll in IT training in the UK. Cloud Computing, DevOps Engineering, and AI for Engineers." />
-  
-  <meta property="og:title" content="Book Consultation | Ivy Training & Consulting UK" />
-  <meta property="og:description" content="Book a consultation or enroll in IT training in the UK. Cloud Computing, DevOps Engineering, and AI for Engineers." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/hero.jpg" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-  <nav class="nav container">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.jpg" alt="Ivy Training &amp; Consulting UK logo" class="brand__logo" />
-      <span class="brand__name">Ivy Training &amp; Consulting UK</span>
-    </a>
+<section class="section" id="enroll">
+  <div class="container">
+    <div class="grid grid--two" style="align-items:start;">
+      <!-- Formspree Form -->
+      <div class="panel">
+        <h2 style="margin-top:0;">Enroll / Book Consultation</h2>
+        <p class="muted">
+          Fill this form and we’ll reply by email with next steps, cohort dates, and payment details.
+        </p>
 
-    <button class="nav__toggle" aria-label="Open menu" data-menu-toggle>☰</button>
+        <form action="https://formspree.io/f/mlgjbrwj" method="POST" style="margin-top:14px;">
+          <!-- Custom email subject -->
+          <input type="hidden" name="_subject" value="New Ivy Training & Consulting UK Inquiry" />
 
-    <div class="nav__links" data-menu>
-      <a class="nav__group-label nav__group-link" href="courses.html">Prospective Students</a>
-      <a class="nav__link" href="courses.html">Course Info</a>
-      <a class="nav__link" href="professionals.html">Working Professionals</a>
-      <a class="nav__link" href="about.html">About</a>
+          <!-- Honeypot spam protection (leave as-is) -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-      <span class="nav__divider" aria-hidden="true"></span>
-
-      <a class="nav__group-label nav__group-link" href="contact.html">Support</a>
-      <a class="nav__link" href="corporate.html">Consulting / Corporate</a>
-      <a class="nav__link is-active nav__cta" href="contact.html">Book Consultation</a>
-    </div>
-  </nav>
-</header>
-  <main>
-  <section class="hero hero--compact">
-    <div class="hero__bg">
-      <img src="assets/hero.jpg" alt="" class="hero__bg-media hero__bg-media--blur" />
-      <div class="hero__overlay"></div>
-    </div>
-
-    <div class="container hero__content">
-      <span class="kicker">Enroll / Contact</span>
-      <h1>Enroll Now</h1>
-      <p>Send your details and preferred course. We’ll respond by email with next steps.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="grid grid--two" style="align-items:start;">
-        <div class="panel">
-          <h2 style="margin-top:0;">Contact form</h2>
-
-          <div class="notice" style="margin-top:12px;">
-            <strong>Important:</strong> GitHub Pages is static, so the form needs a service.
-            The easiest free option is <strong>Formspree</strong>:
-            <ol class="list" style="margin-top:10px;">
-              <li>Create a free Formspree form and copy your endpoint URL.</li>
-              <li>Replace <code>YOUR_FORMSPREE_ENDPOINT</code> below.</li>
-              <li>Deploy. Submissions will arrive in your email.</li>
-            </ol>
-          </div>
-
-          <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" style="margin-top:14px;">
-            <div class="form-grid">
-              <div>
-                <label class="label" for="name">Full name</label>
-                <input class="input" id="name" name="name" placeholder="Your name" required />
-              </div>
-              <div>
-                <label class="label" for="email">Email</label>
-                <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
+          <div class="form-grid">
+            <div>
+              <label class="label" for="fullName">Full name</label>
+              <input class="input" id="fullName" name="name" placeholder="Your full name" required />
             </div>
 
-            <div style="margin-top:12px;">
-              <label class="label" for="interest">Course / interest</label>
-              <select class="input" id="interest" name="interest">
-                <option>Cloud Engineering</option>
-                <option>DevOps</option>
-                <option>Solution Architecture</option>
-                <option>Data Science</option>
-                <option>AI</option>
-                <option>Corporate Training</option>
+            <div>
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <label class="label" for="interest">What do you need?</label>
+            <select class="input" id="interest" name="interest" required>
+              <option value="" disabled selected>Select an option</option>
+              <option>Enroll (Cloud Computing)</option>
+              <option>Enroll (DevOps Engineering)</option>
+              <option>Enroll (AI for Engineers)</option>
+              <option>Corporate / Consulting</option>
+              <option>General question</option>
+            </select>
+          </div>
+
+          <div class="form-grid" style="margin-top:12px;">
+            <div>
+              <label class="label" for="schedule">Preferred schedule</label>
+              <select class="input" id="schedule" name="schedule">
+                <option>Weekday evenings</option>
+                <option>Weekends</option>
+                <option>Flexible / Self-paced</option>
               </select>
             </div>
 
-            <div style="margin-top:12px;">
-              <label class="label" for="message">Message</label>
-              <textarea class="input" id="message" name="message" rows="6" placeholder="Tell us your goal and schedule…" required></textarea>
+            <div>
+              <label class="label" for="experience">Current level</label>
+              <select class="input" id="experience" name="experience">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
             </div>
-
-            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-              <button class="btn btn--primary" type="submit">Enroll Now</button>
-              <a class="btn btn--ghost" href="courses.html">Browse courses</a>
-            </div>
-          </form>
-        </div>
-
-        <div class="panel">
-          <h2 style="margin-top:0;">Direct contact</h2>
-          <p class="muted">Email us anytime:</p>
-          <p><strong>ivytrainingcouk@gmail.com</strong></p>
-
-          <h3 style="margin-top:18px;">What to include</h3>
-          <ul class="list">
-            <li>Your background (beginner / intermediate)</li>
-            <li>Target role (cloud engineer, DevOps, architect, data, AI)</li>
-            <li>Preferred schedule (weekday/weekend)</li>
-          </ul>
-
-          <div class="notice" style="margin-top:14px;">
-            Want your own domain email later? Once youD is ready, switch to <strong>hello@yourdomain</strong>
-            for a more premium look.
           </div>
+
+          <div style="margin-top:12px;">
+            <label class="label" for="message">Message</label>
+            <textarea
+              class="input"
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell us your goal, background, and any deadlines (job switch, certification, etc.)…"
+              required
+            ></textarea>
+          </div>
+
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn btn--primary" type="submit">Enroll Now</button>
+            <a class="btn btn--ghost" href="courses.html">View Course Info</a>
+          </div>
+
+          <p class="muted" style="margin-top:12px; font-size:14px;">
+            By submitting, you agree to be contacted about your inquiry. (GDPR-friendly messaging goes in your Privacy page.)
+          </p>
+        </form>
+      </div>
+
+      <!-- What happens next -->
+      <div class="panel">
+        <h2 style="margin-top:0;">What happens next</h2>
+        <ul class="list" style="padding-left:18px; line-height:1.85;">
+          <li>We review your goal and recommend the best track (Cloud, DevOps, or AI).</li>
+          <li>We confirm the next cohort date and weekly schedule.</li>
+          <li>You receive onboarding steps, tools setup, and learning resources.</li>
+        </ul>
+
+        <div class="notice" style="margin-top:14px;">
+          Prefer email? Reach us at <strong>ivytrainingcouk@gmail.com</strong>
         </div>
       </div>
     </div>
-  </section>
-</main>
-  <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <strong>Ivy Training &amp; Consulting UK Limited</strong>
-      <p class="muted">Cloud • DevOps • Solution Architecture • Data Science • AI</p>
-      <p class="muted">Email: ivytrainingcouk@gmail.com</p>
-    </div>
-
-    <div>
-      <strong>Students</strong>
-      <a href="courses.html">Course Info</a>
-      <a href="student-handbook.html">Student Handbook</a>
-      <a href="contact.html">Book Consultation</a>
-    </div>
-
-    <div>
-      <strong>Trust &amp; Compliance</strong>
-      <a href="privacy.html">Privacy Policy (GDPR)</a>
-      <a href="gdpr.html">GDPR Statement</a>
-      <p class="muted" style="margin-top:10px;">
-        Accreditation: <em>Placeholder</em> — add your awarding body or partner accreditation statement here.
-      </p>
-    </div>
   </div>
-
-  <div class="footer__bottom container">
-    <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK</span>
-  </div>
-</footer>
-  <script src="js/main.js"></script>
-</body>
-</html>
+</section>
