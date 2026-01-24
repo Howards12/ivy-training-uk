@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alumni Testimonials | Ivy Training & Consulting UK</title>
+    <meta
+      name="description"
+      content="Watch alumni stories, explore real class-in-session moments, and read student testimonials from Ivy Training & Consulting UK."
+    />
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Alumni Testimonials | Ivy Training & Consulting UK" />
+    <meta
+      property="og:description"
+      content="Watch alumni stories, explore class-in-session moments, and read student testimonials."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/hero-clean.jpg" />
+
+    <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      /* Page-only helpers (keeps your site background/colors intact) */
+      .page {
+        padding: 96px 0 64px;
+      }
+      .page-hero {
+        padding: 48px 0 28px;
+      }
+      .page-hero h1 {
+        margin: 0 0 12px;
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+      }
+      .page-hero p {
+        margin: 0;
+        max-width: 70ch;
+        opacity: 0.92;
+      }
+
+      .section {
+        padding: 36px 0;
+      }
+      .section-title {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+      .section-title h2 {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+      }
+      .section-title .sub {
+        margin: 0;
+        opacity: 0.8;
+        font-size: 14px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(12, 1fr);
+      }
+      .video-card {
+        grid-column: span 12;
+        border-radius: 18px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+      }
+      @media (min-width: 900px) {
+        .video-card {
+          grid-column: span 4;
+        }
+      }
+      .video-frame {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 9 / 16; /* Shorts-friendly */
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .video-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      .video-meta {
+        padding: 14px 14px 16px;
+      }
+      .video-meta h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+      .video-meta p {
+        margin: 0;
+        font-size: 13px;
+        opacity: 0.85;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(12, 1fr);
+      }
+      .shot {
+        grid-column: span 12;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+      }
+      @media (min-width: 900px) {
+        .shot {
+          grid-column: span 4;
+        }
+      }
+      .shot img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+      }
+      .shot .cap {
+        padding: 12px 12px 14px;
+        font-size: 13px;
+        opacity: 0.88;
+      }
+
+      .testimonial-grid {
+        grid-template-columns: repeat(12, 1fr);
+      }
+      .t-card {
+        grid-column: span 12;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.03);
+        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32);
+      }
+      @media (min-width: 900px) {
+        .t-card {
+          grid-column: span 6;
+        }
+      }
+      .t-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        display: block;
+      }
+      .t-body {
+        padding: 16px 16px 18px;
+      }
+      .t-body p {
+        margin: 0 0 12px;
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.92;
+      }
+      .t-person {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        opacity: 0.9;
+        font-size: 13px;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      /* Make sure in-page anchor offset respects fixed header */
+      :target {
+        scroll-margin-top: 92px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header (keeps same structure as your site) -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK">
+          <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">Ivy Training &amp; Consulting UK</div>
+            <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
+          </div>
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+          <div class="nav-group">
+            <span class="nav-label">PROSPECTIVE STUDENTS</span>
+            <a class="nav-link" href="courses.html">Course Info</a>
+            <a class="nav-link active" href="testimonials.html" aria-current="page">Testimonials</a>
+            <a class="nav-link" href="professionals.html">Working Professionals</a>
+          </div>
+
+          <div class="nav-divider" aria-hidden="true"></div>
+
+          <div class="nav-group">
+            <span class="nav-label">SUPPORT</span>
+            <a class="nav-link" href="corporate.html">Consulting / Corporate</a>
+            <a class="nav-link nav-cta" href="contact.html">Book Consultation</a>
+          </div>
+        </nav>
+
+        <div class="header-actions">
+          <a class="btn btn-ghost" href="courses.html">View Courses</a>
+          <a class="btn btn-gold" href="courses.html#enroll">Enroll Now</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="page-hero">
+        <div class="container">
+          <h1>Testimonials</h1>
+          <p>
+            Real stories from real students. Watch alumni shorts, browse “class in session” snapshots, and read
+            written testimonials.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-gold" href="courses.html#enroll">Enroll Now</a>
+            <a class="btn btn-ghost" href="#alumni-videos">Watch Videos</a>
+            <a class="btn btn-ghost" href="#written-testimonials">Read Testimonials</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alumni Videos -->
+      <section id="alumni-videos" class="section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Alumni Video Stories</h2>
+            <p class="sub">Short, honest feedback from our graduates</p>
+          </div>
+
+          <div class="grid video-grid">
+            <!-- Tip: using youtube-nocookie for privacy-friendly embeds -->
+            <article class="video-card">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/LT2BiNrW-SM"
+                  title="Alumni story #1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="video-meta">
+                <h3>Alumni Story #1</h3>
+                <p>Top-rated testimonial (Shorts)</p>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <div class="video-frame">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/5sa1jjuHkBc"
+                  title="Alumni story #2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+              <div class="video-meta">
+                <h3>Alumni Story #2</h3 hookup;
+
+::contentReference[oaicite:0]{index=0}
