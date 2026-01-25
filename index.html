@@ -5,17 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Ivy Training & Consulting UK | Cloud, DevOps & AI Training</title>
-    <meta
-      name="description"
-      content="Ivy Training & Consulting UK delivers instructor-led Cloud Computing, DevOps Engineering, and AI training programs in the UK with hands-on projects and career support."
-    />
+    <meta name="description" content="Instructor-led Cloud, DevOps, and AI training programs in the UK with hands-on projects and recruitment assistance." />
 
-    <!-- OpenGraph -->
     <meta property="og:title" content="Ivy Training & Consulting UK | Cloud, DevOps & AI Training" />
-    <meta
-      property="og:description"
-      content="Instructor-led training in Cloud, DevOps, and AI — hands-on projects, supportive cohorts, and career-focused outcomes."
-    />
+    <meta property="og:description" content="Instructor-led training in Cloud, DevOps, and AI — 8-12 week programs with career support." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.ivytrainingco.uk/" />
     <meta property="og:image" content="assets/hero.jpg" />
@@ -24,50 +17,42 @@
 
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* Fix for visible alumni pictures */
+      .alumni-mini-img { display: block !important; width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #d4af37; }
+      /* Streamlined Header */
+      .nav-group-label { display: none; } /* Removing 'choking' labels */
+      .nav-links { display: flex; gap: 1.5rem; }
+      /* Banner Sharpening */
+      .banner { height: 300px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+      .banner img { width: 100%; height: auto; object-fit: cover; }
+    </style>
   </head>
 
   <body>
-    <!-- Skip link -->
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
-          <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
+        <a class="brand" href="index.html">
+          <img src="assets/logo.jpg" alt="Ivy Training logo" class="brand-logo" />
           <div class="brand-text">
-            <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-            <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
+            <div class="brand-name">Ivy Training UK</div>
           </div>
         </a>
 
-        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="nav" aria-label="Primary navigation">
-          <div class="nav-groups">
-            <div class="nav-group">
-              <span class="nav-group-label">Prospective Students</span>
-              <div class="nav-links">
-                <a href="courses.html">Course Info</a>
-                <a href="professionals.html">Working Professionals</a>
-                <a href="about.html">About</a>
-                <a href="testimonials.html" class="is-new">Testimonials</a>
-              </div>
-            </div>
-
-            <div class="nav-group">
-              <span class="nav-group-label">Support</span>
-              <div class="nav-links">
-                <a href="corporate.html">Consulting / Corporate</a>
-                <a href="contact.html">Book Consultation</a>
-              </div>
-            </div>
+        <nav class="nav">
+          <div class="nav-links">
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
           </div>
-
           <div class="nav-cta">
-            <a class="btn btn-ghost" href="courses.html">View Courses</a>
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
           </div>
         </nav>
@@ -75,361 +60,117 @@
     </header>
 
     <main id="main">
-      <!-- HERO -->
       <section class="hero">
-        <div class="hero-bg" aria-hidden="true"></div>
-
         <div class="container hero-inner">
           <div class="hero-copy">
-            <p class="eyebrow">Instructor-led UK training • Practical projects • Career support</p>
+            <p class="eyebrow">Instructor-led UK training • 8–12 Week Programs</p>
             <h1>Cloud, DevOps &amp; AI training that gets you building.</h1>
-            <p class="lead">
-              Join a structured cohort, learn by doing, and graduate with real-world project experience
-              across Cloud Computing, DevOps Engineering, and AI for Engineers.
-            </p>
-
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-              <a class="btn btn-ghost" href="courses.html">Explore Course Info</a>
-            </div>
-
-            <div class="hero-badges" aria-label="Key program highlights">
-              <div class="badge">8–12 week programs</div>
-              <div class="badge">Live sessions + support</div>
-              <div class="badge">Hands-on projects</div>
-              <div class="badge">Recruitment assistance</div>
+              <a class="btn btn-ghost" href="courses.html">Explore Courses</a>
             </div>
           </div>
-
-          <div class="hero-card" role="img" aria-label="Ivy Training preview image">
-            <img
-              src="assets/hero.jpg"
-              alt="Ivy Training & Consulting UK banner showing Cloud, DevOps, Data Science, and AI training"
-              loading="eager"
-            />
+          <div class="hero-card">
+            <img src="assets/hero.jpg" alt="Ivy Training Banner" loading="eager" />
           </div>
         </div>
       </section>
 
-      <!-- ALUMNI PHOTO TESTIMONIALS (compact, under hero) -->
       <section class="section section-tight" id="alumni">
         <div class="container">
-          <div class="section-head section-head-tight">
-            <div>
-              <h2 class="h2-sm">Hear From Our Alumni</h2>
-              <p class="muted">
-                A few quick wins from graduates. Watch the full stories on the Testimonials page.
-              </p>
-            </div>
-
-            <div class="section-actions">
-              <a class="btn btn-ghost btn-sm" href="testimonials.html">Watch Alumni Stories</a>
-            </div>
+          <div class="section-head">
+            <h2>Hear From Our Alumni</h2>
           </div>
-
           <div class="alumni-mini">
             <article class="alumni-mini-card">
-              <img
-                class="alumni-mini-img"
-                src="assets/alumni-1.jpg"
-                alt="Ikay U. — Alumni testimonial"
-                loading="lazy"
-              />
-              <div class="alumni-mini-meta">
-                <div class="alumni-mini-name">Ikay U.</div>
-                <div class="alumni-mini-role">AWS Solution Architect</div>
-              </div>
+              <img class="alumni-mini-img" src="assets/alumni-1.jpg" alt="Ikay U." />
+              <div class="alumni-mini-meta"><div class="alumni-mini-name">Ikay U.</div><div class="alumni-mini-role">Solution Architect</div></div>
             </article>
-
             <article class="alumni-mini-card">
-              <img
-                class="alumni-mini-img"
-                src="assets/alumni-2.jpg"
-                alt="Adelia Manuel — Alumni testimonial"
-                loading="lazy"
-              />
-              <div class="alumni-mini-meta">
-                <div class="alumni-mini-name">Adelia Manuel</div>
-                <div class="alumni-mini-role">Cloud Engineer</div>
-              </div>
+              <img class="alumni-mini-img" src="assets/alumni-2.jpg" alt="Adelia Manuel" />
+              <div class="alumni-mini-meta"><div class="alumni-mini-name">Adelia Manuel</div><div class="alumni-mini-role">Cloud Engineer</div></div>
             </article>
-
             <article class="alumni-mini-card">
-              <img
-                class="alumni-mini-img"
-                src="assets/alumni-3.jpg"
-                alt="Thelma N. — Alumni testimonial"
-                loading="lazy"
-              />
-              <div class="alumni-mini-meta">
-                <div class="alumni-mini-name">Thelma N.</div>
-                <div class="alumni-mini-role">Cloud Security Specialist</div>
-              </div>
+              <img class="alumni-mini-img" src="assets/alumni-3.jpg" alt="Thelma N." />
+              <div class="alumni-mini-meta"><div class="alumni-mini-name">Thelma N.</div><div class="alumni-mini-role">Security Specialist</div></div>
             </article>
-
-            <article class="alumni-mini-card">
-              <img
-                class="alumni-mini-img"
-                src="assets/alumni-4.jpg"
-                alt="Gideon Aiyegunle — Alumni testimonial"
-                loading="lazy"
-              />
-              <div class="alumni-mini-meta">
-                <div class="alumni-mini-name">Gideon Aiyegunle</div>
-                <div class="alumni-mini-role">Alumni</div>
-              </div>
-            </article>
-          </div>
-
-          <div class="alumni-mini-footer">
-            <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost btn-sm" href="testimonials.html">See all testimonials</a>
           </div>
         </div>
       </section>
 
-      <!-- COURSE PATHS -->
       <section class="section">
         <div class="container">
           <div class="section-head">
             <h2>Choose Your Track</h2>
-            <p class="muted">Structured, practical programs designed for real engineering outcomes.</p>
+            <p class="muted">8-12 week programs designed for real engineering outcomes.</p>
           </div>
-
           <div class="cards">
-            <article class="card">
-              <div class="card-icon">☁️</div>
-              <h3>Cloud Computing</h3>
-              <p class="muted">
-                Build core cloud skills, deploy real workloads, and learn how to design reliable architectures.
-              </p>
-              <div class="card-actions">
-                <a class="link" href="cloud-computing.html">View syllabus →</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">♾️</div>
-              <h3>DevOps Engineering</h3>
-              <p class="muted">
-                CI/CD, automation, infrastructure-as-code, monitoring, and production-ready practices.
-              </p>
-              <div class="card-actions">
-                <a class="link" href="devops-engineering.html">View syllabus →</a>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-icon">🤖</div>
-              <h3>AI for Engineers</h3>
-              <p class="muted">
-                Practical AI foundations, applied tooling, and engineering-focused AI project delivery.
-              </p>
-              <div class="card-actions">
-                <a class="link" href="ai-for-engineers.html">View syllabus →</a>
-              </div>
-            </article>
+            <article class="card"><h3>Solution Architect</h3><p>Design reliable cloud architectures.</p><a class="link" href="courses.html">View syllabus →</a></article>
+            <article class="card"><h3>Data Science</h3><p>Insights through data engineering.</p><a class="link" href="courses.html">View syllabus →</a></article>
+            <article class="card"><h3>AI Practitioner</h3><p>Practical AI Foundations.</p><a class="link" href="courses.html">View syllabus →</a></article>
+            <article class="card"><h3>Cloud Engineer</h3><p>Core cloud deployment skills.</p><a class="link" href="courses.html">View syllabus →</a></article>
+            <article class="card"><h3>DevOps Engineer</h3><p>Automation & CI/CD practices.</p><a class="link" href="courses.html">View syllabus →</a></article>
+            <article class="card"><h3>AI for Engineers</h3><p>Applied tooling for builders.</p><a class="link" href="courses.html">View syllabus →</a></article>
           </div>
         </div>
       </section>
 
-      <!-- PREMIUM BANNER SECTION (Google ad image) -->
-      <section class="section">
+      <section class="section section-tight">
         <div class="container">
           <div class="banner">
-            <img src="assets/hero.jpg" alt="Ivy Training promotional banner" loading="lazy" />
-            <a class="banner-hotspot" href="contact.html" aria-label="Enroll Now" title="Enroll Now"></a>
+            <img src="assets/hero.jpg" alt="Promo Banner" />
           </div>
-
-          <p class="muted banner-note">
-            Ready to join the next cohort? Enroll now and we’ll respond with schedule, pricing, and onboarding steps.
-          </p>
         </div>
       </section>
 
-      <!-- PROJECT EXPERIENCE -->
-      <section class="section">
+      <section class="section" id="enrollment-form">
         <div class="container">
-          <div class="two-col">
-            <div>
-              <h2>Project Experience That Shows</h2>
-              <p class="muted">
-                Your portfolio should speak for you. We build projects that mirror real delivery: requirements,
-                implementation, testing, and a final demo.
-              </p>
-              <ul class="list">
-                <li>Realistic project briefs and milestones</li>
-                <li>Weekly check-ins and practical reviews</li>
-                <li>Demo day and portfolio-ready documentation</li>
-              </ul>
-              <div class="inline-actions">
-                <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-                <a class="btn btn-ghost" href="courses.html">See course structure</a>
-              </div>
-            </div>
-
-            <div class="panel">
-              <h3 class="panel-title">CTA for students</h3>
-              <p class="muted">Want to graduate with a strong portfolio project?</p>
-              <a class="btn btn-primary btn-block" href="contact.html">Book a Consultation</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RECRUITMENT ASSISTANCE -->
-      <section class="section">
-        <div class="container">
-          <div class="two-col">
-            <div class="panel">
-              <h3 class="panel-title">Recruitment Assistance</h3>
-              <p class="muted">
-                We help you position your skills: CV improvements, interview preparation, and guidance for your next role.
-              </p>
-              <ul class="list">
-                <li>CV and LinkedIn optimisation</li>
-                <li>Mock interviews and technical prep</li>
-                <li>Role-focused study & project recommendations</li>
-              </ul>
-              <a class="btn btn-primary btn-block" href="contact.html">Get Career Support</a>
-            </div>
-
-            <div>
-              <h2>Support that continues beyond the class.</h2>
-              <p class="muted">
-                You don’t just “finish a course” — you build confidence, get feedback, and prepare for real interviews.
-              </p>
-              <div class="inline-actions">
-                <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-                <a class="btn btn-ghost" href="testimonials.html">See outcomes</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PRICING -->
-      <section class="section" id="pricing">
-        <div class="container">
-          <div class="section-head">
-            <h2>Pricing</h2>
-            <p class="muted">
-              Choose a plan that fits your timeline. Final pricing can vary by cohort format and support level.
-            </p>
-          </div>
-
-          <div class="pricing">
-            <article class="price-card">
-              <h3>Starter</h3>
-              <p class="price">£<span>499</span></p>
-              <p class="muted">Best for motivated learners who want structure + materials.</p>
-              <ul class="list">
-                <li>Course syllabus + labs</li>
-                <li>Weekly guidance</li>
-                <li>Certificate of completion</li>
-              </ul>
-              <a class="btn btn-ghost btn-block" href="contact.html">Enroll Now</a>
-            </article>
-
-            <article class="price-card price-card-featured">
-              <div class="pill">Most Popular</div>
-              <h3>Professional</h3>
-              <p class="price">£<span>899</span></p>
-              <p class="muted">Live instruction + project reviews + stronger accountability.</p>
-              <ul class="list">
-                <li>Live sessions + recordings</li>
-                <li>Project reviews & feedback</li>
-                <li>Recruitment assistance</li>
-              </ul>
-              <a class="btn btn-primary btn-block" href="contact.html">Enroll Now</a>
-            </article>
-
-            <article class="price-card">
-              <h3>Career+</h3>
-              <p class="price">£<span>1299</span></p>
-              <p class="muted">Max support for job switchers and interview-focused learners.</p>
-              <ul class="list">
-                <li>Everything in Professional</li>
-                <li>Mock interviews</li>
-                <li>CV + LinkedIn optimisation</li>
-              </ul>
-              <a class="btn btn-ghost btn-block" href="contact.html">Enroll Now</a>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- FINAL CTA -->
-      <section class="section section-cta">
-        <div class="container cta-box">
-          <div>
-            <h2>Ready to join the next cohort?</h2>
-            <p class="muted">Tell us your goal and timeline. We’ll recommend the best track and send the next steps.</p>
-          </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost" href="courses.html">View Course Info</a>
+          <div class="panel" style="background: #0b1510; border: 1px solid #d4af37; padding: 2rem;">
+            <h2 style="color: #d4af37; text-align: center;">Enrollment Inquiry</h2>
+            <p style="text-align: center; color: #fff;">Please complete the form below to begin your 8-12 week journey.</p>
+            <form style="display: grid; gap: 1rem; max-width: 600px; margin: 0 auto;">
+              <input type="text" placeholder="Full Name" style="padding: 1rem; background: #1a2620; border: 1px solid #333; color: #fff;">
+              <input type="email" placeholder="Email Address" style="padding: 1rem; background: #1a2620; border: 1px solid #333; color: #fff;">
+              <select style="padding: 1rem; background: #1a2620; border: 1px solid #333; color: #fff;">
+                <option>Select Your Track</option>
+                <option>Solution Architect</option>
+                <option>Data Science</option>
+                <option>AI Practitioner</option>
+              </select>
+              <button class="btn btn-primary" type="button">Submit Application</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <div class="footer-brand">Ivy Training &amp; Consulting UK</div>
-          <p class="muted">
-            Instructor-led training in Cloud, DevOps and AI with practical projects and career support.
-          </p>
-          <p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
+          <div class="footer-brand">Ivy Training UK</div>
+          <p class="muted">ivytrainingcouk@gmail.com</p>
         </div>
-
         <div>
-          <div class="footer-title">Prospective Students</div>
           <ul class="footer-links">
-            <li><a href="courses.html">Course Info</a></li>
-            <li><a href="professionals.html">Working Professionals</a></li>
-            <li><a href="testimonials.html">Testimonials</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Support</div>
-          <ul class="footer-links">
-            <li><a href="contact.html">Book Consultation</a></li>
-            <li><a href="corporate.html">Corporate / Consulting</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Trust &amp; Compliance</div>
-          <ul class="footer-links">
-            <li><a href="student-handbook.html">Student Handbook</a></li>
             <li><a href="gdpr.html">GDPR</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
+            <li><a href="student-handbook.html">Handbook</a></li>
           </ul>
         </div>
       </div>
-
       <div class="container footer-bottom">
-        <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK. All rights reserved.</span>
+        <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK.</span>
       </div>
     </footer>
 
     <script>
-      // Mobile nav toggle (simple + reliable)
       const toggle = document.querySelector(".nav-toggle");
       const nav = document.querySelector(".nav");
       if (toggle && nav) {
         toggle.addEventListener("click", () => {
-          const isOpen = nav.classList.toggle("nav-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
+          nav.classList.toggle("nav-open");
         });
       }
-
-      // Footer year
       document.getElementById("year").textContent = String(new Date().getFullYear());
     </script>
   </body>
