@@ -840,3 +840,75 @@ display: block;
   font-size: 14px;
 }
 
+/* ================================
+   Brand text: keep tagline one line
+   ================================ */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-tag--singleline {
+  white-space: nowrap;
+  line-height: 1.2;
+}
+
+/* If it gets tight on mobile, shrink slightly instead of wrapping */
+@media (max-width: 520px) {
+  .brand-tag--singleline {
+    font-size: 12px;
+    opacity: 0.85;
+  }
+}
+
+/* ================================
+   Top banner CTA: force clickability
+   ================================ */
+.top-ad-card {
+  position: relative;
+}
+
+.top-ad-card img {
+  display: block;
+}
+
+.top-ad-cta {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 5;            /* ensure it sits ABOVE everything */
+  pointer-events: auto;  /* ensure it can be clicked */
+}
+
+/* In case any parent layer steals clicks */
+.top-ad-card,
+.top-ad-card * {
+  pointer-events: auto;
+}
+
+/* Make sure the image never blocks the CTA */
+.top-ad-card img {
+  pointer-events: none;
+}
+
+/* ================================
+   Alumni hover: zoom OUT on hover
+   (so text on image becomes readable)
+   ================================ */
+.alumni-media img {
+  transform: scale(1.06);              /* default slightly zoomed IN */
+  transition: transform 180ms ease, filter 180ms ease;
+  will-change: transform;
+}
+
+/* On hover: zoom OUT (scale down) */
+.alumni-card--zoomout:hover .alumni-media img {
+  transform: scale(0.98);              /* zoom OUT */
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* Soft focus ring */
+.alumni-card--zoomout:hover {
+  box-shadow: 0 0 0 2px rgba(199, 173, 115, 0.25), 0 18px 55px rgba(0, 0, 0, 0.32);
+}
