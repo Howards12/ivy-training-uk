@@ -7,30 +7,155 @@
     <title>Testimonials | Ivy Training & Consulting UK</title>
     <meta
       name="description"
-      content="Watch Ivy Training & Consulting UK alumni stories, browse class-in-session highlights, and read student testimonials from Cloud, DevOps, Data Science, and AI cohorts."
+      content="Hear from Ivy Training & Consulting UK alumni. Watch student stories, explore class highlights, and read testimonials from our Cloud, DevOps, and AI programs."
     />
 
     <!-- OpenGraph -->
     <meta property="og:title" content="Testimonials | Ivy Training & Consulting UK" />
     <meta
       property="og:description"
-      content="Hear from alumni, view class-in-session highlights, and explore student testimonials."
+      content="Watch alumni stories, browse class highlights, and read student feedback from Ivy Training & Consulting UK."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ivytrainingco.uk/testimonials.html" />
     <meta property="og:image" content="assets/hero.jpg" />
 
     <meta name="theme-color" content="#0b1510" />
 
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <style>
+      /* Page-only helpers (keeps your site theme intact) */
+      .page-hero {
+        padding-top: 64px;
+        padding-bottom: 34px;
+      }
+
+      .page-hero h1 {
+        margin: 0 0 10px;
+        font-size: clamp(28px, 3.5vw, 44px);
+        letter-spacing: 0.2px;
+      }
+
+      .page-hero p {
+        margin: 0;
+        max-width: 78ch;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      /* Alumni image testimonials */
+      .alumni-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        margin-top: 18px;
+      }
+
+      .alumni-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+      }
+
+      .alumni-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .alumni-card .alumni-meta {
+        padding: 12px 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .alumni-card .alumni-name {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        margin-bottom: 4px;
+      }
+
+      .alumni-card .alumni-role {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      /* YouTube Shorts (9:16) to avoid black side pillars */
+      .shorts-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin-top: 18px;
+      }
+
+      .short-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .short-frame {
+        position: relative;
+        width: 100%;
+        padding-top: 177.78%; /* 9:16 ratio */
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .short-frame iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .short-caption {
+        padding: 12px 14px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      /* Class gallery */
+      .gallery-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        margin-top: 18px;
+      }
+
+      .gallery-item {
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Clean CTA row */
+      .page-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+      }
+    </style>
   </head>
 
   <body>
     <!-- Skip link -->
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (same structure as your index.html) -->
+    <!-- Header (same as index) -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
@@ -53,7 +178,7 @@
                 <a href="courses.html">Course Info</a>
                 <a href="professionals.html">Working Professionals</a>
                 <a href="about.html">About</a>
-                <a href="testimonials.html" class="is-new" aria-current="page">Testimonials</a>
+                <a href="testimonials.html" class="is-new">Testimonials</a>
               </div>
             </div>
 
@@ -75,226 +200,175 @@
     </header>
 
     <main id="main">
-      <!-- Intro -->
-      <section class="section section-tight">
+      <!-- Page Hero -->
+      <section class="section page-hero">
         <div class="container">
-          <div class="section-head section-head-tight">
-            <div>
-              <h1 class="t-page-title">Testimonials</h1>
-              <p class="muted t-page-sub">
-                Real feedback from our cohorts. Watch alumni stories, see “class in session” highlights, and explore
-                student testimonials.
-              </p>
-            </div>
+          <h1>Testimonials</h1>
+          <p>
+            Watch alumni stories, browse real class moments, and read feedback from students who completed our Cloud,
+            DevOps, and AI programs.
+          </p>
 
-            <div class="section-actions">
-              <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
-              <a class="btn btn-ghost btn-sm" href="courses.html">Explore Course Info</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Alumni videos (NO black pillars: use thumbnail cards instead of embeds) -->
-      <section class="section" id="alumni-videos">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Alumni Stories (Video)</h2>
-              <p class="muted">
-                Click to watch (opens YouTube). This layout avoids the black side pillars that appear on embedded Shorts.
-              </p>
-            </div>
-          </div>
-
-          <div class="t-video-grid">
-            <!-- Video 1 -->
-            <a
-              class="t-video-card"
-              href="https://youtube.com/shorts/LT2BiNrW-SM?feature=share"
-              target="_blank"
-              rel="noopener"
-              aria-label="Watch Alumni Story #1 on YouTube"
-              title="Watch Alumni Story #1"
-            >
-              <div class="t-video-thumb">
-                <img
-                  src="https://img.youtube.com/vi/LT2BiNrW-SM/hqdefault.jpg"
-                  alt="Thumbnail for Alumni Story #1"
-                  loading="lazy"
-                />
-                <span class="t-play" aria-hidden="true">▶</span>
-              </div>
-              <div class="t-video-meta">
-                <div class="t-video-title">Alumni Story #1</div>
-                <div class="muted">Top alumni story (your best → least best order)</div>
-              </div>
-            </a>
-
-            <!-- Video 2 -->
-            <a
-              class="t-video-card"
-              href="https://youtube.com/shorts/5sa1jjuHkBc?feature=share"
-              target="_blank"
-              rel="noopener"
-              aria-label="Watch Alumni Story #2 on YouTube"
-              title="Watch Alumni Story #2"
-            >
-              <div class="t-video-thumb">
-                <img
-                  src="https://img.youtube.com/vi/5sa1jjuHkBc/hqdefault.jpg"
-                  alt="Thumbnail for Alumni Story #2"
-                  loading="lazy"
-                />
-                <span class="t-play" aria-hidden="true">▶</span>
-              </div>
-              <div class="t-video-meta">
-                <div class="t-video-title">Alumni Story #2</div>
-                <div class="muted">Learning experience, support, and outcomes</div>
-              </div>
-            </a>
-
-            <!-- Video 3 -->
-            <a
-              class="t-video-card"
-              href="https://youtube.com/shorts/9a-QZwm6Gqc?feature=share"
-              target="_blank"
-              rel="noopener"
-              aria-label="Watch Alumni Story #3 on YouTube"
-              title="Watch Alumni Story #3"
-            >
-              <div class="t-video-thumb">
-                <img
-                  src="https://img.youtube.com/vi/9a-QZwm6Gqc/hqdefault.jpg"
-                  alt="Thumbnail for Alumni Story #3"
-                  loading="lazy"
-                />
-                <span class="t-play" aria-hidden="true">▶</span>
-              </div>
-              <div class="t-video-meta">
-                <div class="t-video-title">Alumni Story #3</div>
-                <div class="muted">Confidence boost + next steps after training</div>
-              </div>
-            </a>
-          </div>
-
-          <div class="inline-actions" style="margin-top: 16px">
+          <div class="page-actions">
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost" href="contact.html">Book Consultation</a>
+            <a class="btn btn-ghost" href="#alumni">See Alumni Feedback</a>
+            <a class="btn btn-ghost" href="#videos">Watch Videos</a>
           </div>
         </div>
       </section>
 
-      <!-- Alumni photo testimonials (make sure images are visible) -->
-      <section class="section" id="alumni-photos">
+      <!-- Alumni Image Testimonials -->
+      <section class="section section--alt" id="alumni">
         <div class="container">
-          <div class="section-head">
+          <div class="section__head">
             <div>
-              <h2>Featured Alumni</h2>
-              <p class="muted">Photo testimonials (legible, premium, and consistent with your site theme).</p>
+              <div class="kicker">Alumni</div>
+              <h2>What Our Students Say</h2>
+              <p class="muted">
+                A few highlights from students who have completed our programs and applied their skills in real roles.
+              </p>
             </div>
           </div>
 
-          <div class="t-alumni-grid">
-            <figure class="t-alumni-item">
-              <img src="assets/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
-            </figure>
-            <figure class="t-alumni-item">
-              <img src="assets/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel." loading="lazy" />
-            </figure>
-            <figure class="t-alumni-item">
-              <img src="assets/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
-            </figure>
-            <figure class="t-alumni-item">
-              <img src="assets/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle." loading="lazy" />
-            </figure>
+          <div class="alumni-grid">
+            <article class="alumni-card">
+              <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial card - Ikay U." loading="lazy" />
+              <div class="alumni-meta">
+                <div class="alumni-name">Ikay U.</div>
+                <div class="alumni-role">AWS Solution Architect</div>
+              </div>
+            </article>
+
+            <article class="alumni-card">
+              <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial card - Adelia Manuel" loading="lazy" />
+              <div class="alumni-meta">
+                <div class="alumni-name">Adelia Manuel</div>
+                <div class="alumni-role">Cloud Engineer</div>
+              </div>
+            </article>
+
+            <article class="alumni-card">
+              <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial card - Thelma N." loading="lazy" />
+              <div class="alumni-meta">
+                <div class="alumni-name">Thelma N.</div>
+                <div class="alumni-role">Cloud Security Specialist</div>
+              </div>
+            </article>
+
+            <article class="alumni-card">
+              <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial card - Gideon Aiyegunle" loading="lazy" />
+              <div class="alumni-meta">
+                <div class="alumni-name">Gideon Aiyegunle</div>
+                <div class="alumni-role">Cloud / DevOps</div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Class in Session gallery -->
-      <section class="section" id="class-in-session">
+      <!-- Videos -->
+      <section class="section" id="videos">
         <div class="container">
-          <div class="section-head">
+          <div class="section__head">
             <div>
+              <div class="kicker">Video</div>
+              <h2>Alumni Stories (Short Videos)</h2>
+              <p class="muted">
+                These are short alumni stories from our cohorts. They’re kept in a dedicated page to support SEO and
+                keep the homepage focused.
+              </p>
+            </div>
+          </div>
+
+          <div class="shorts-grid">
+            <article class="short-card">
+              <div class="short-frame">
+                <iframe
+                  src="https://www.youtube.com/embed/LT2BiNrW-SM"
+                  title="Alumni Story #1 - Ivy Training & Consulting UK"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="short-caption">
+                Alumni Story #1 — structure, coaching, and outcomes after joining the cohort.
+              </div>
+            </article>
+
+            <article class="short-card">
+              <div class="short-frame">
+                <iframe
+                  src="https://www.youtube.com/embed/5sa1jjuHkBc"
+                  title="Alumni Story #2 - Ivy Training & Consulting UK"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="short-caption">
+                Alumni Story #2 — learning experience, support, and confidence from hands-on projects.
+              </div>
+            </article>
+
+            <article class="short-card">
+              <div class="short-frame">
+                <iframe
+                  src="https://www.youtube.com/embed/9a-QZwm6Gqc"
+                  title="Alumni Story #3 - Ivy Training & Consulting UK"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="short-caption">
+                Alumni Story #3 — student review, clarity, and next steps after training.
+              </div>
+            </article>
+          </div>
+
+          <div class="page-actions">
+            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
+            <a class="btn btn-ghost" href="courses.html">Explore Course Info</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class in Session Gallery -->
+      <section class="section section--alt" id="gallery">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <div class="kicker">Class Moments</div>
               <h2>Class in Session</h2>
-              <p class="muted">Zoom screenshots from live sessions (add your images in assets/class/).</p>
+              <p class="muted">
+                Real snapshots from our live cohorts (Zoom sessions and class moments).
+              </p>
             </div>
           </div>
 
-          <div class="t-gallery-grid">
-            <figure class="t-gallery-item">
-              <img src="assets/class/zoom-1.jpg" alt="Zoom class session with multiple students" loading="lazy" />
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-1.jpg" alt="Zoom training session with multiple students" loading="lazy" />
             </figure>
-            <figure class="t-gallery-item">
+            <figure class="gallery-item">
               <img src="assets/class/zoom-2.jpg" alt="Instructor-led live training session on Zoom" loading="lazy" />
             </figure>
-            <figure class="t-gallery-item">
-              <img src="assets/class/zoom-3.jpg" alt="Cohort learning on Zoom with shared screen" loading="lazy" />
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-3.jpg" alt="Cloud engineering cohort Zoom session screenshot" loading="lazy" />
             </figure>
-            <figure class="t-gallery-item">
-              <img src="assets/class/zoom-4.jpg" alt="Group learning session on Zoom" loading="lazy" />
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-4.jpg" alt="DevOps cohort Zoom session screenshot" loading="lazy" />
             </figure>
-            <figure class="t-gallery-item">
-              <img src="assets/class/zoom-5.jpg" alt="Hands-on exercise session on Zoom" loading="lazy" />
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-5.jpg" alt="AI training session Zoom screenshot" loading="lazy" />
             </figure>
-            <figure class="t-gallery-item">
-              <img src="assets/class/zoom-6.jpg" alt="Cohort Q&A session on Zoom" loading="lazy" />
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-6.jpg" alt="Group learning session on Zoom" loading="lazy" />
             </figure>
-          </div>
-
-          <p class="muted" style="margin-top: 12px">
-            Want to join the next cohort? <a class="link" href="contact.html">Enroll now →</a>
-          </p>
-        </div>
-      </section>
-
-      <!-- Written testimonials (safe placeholders you can replace anytime) -->
-      <section class="section" id="written">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>What Students Are Saying</h2>
-              <p class="muted">Written feedback from students across Cloud, DevOps, Data Science, and AI programs.</p>
-            </div>
-          </div>
-
-          <div class="cards">
-            <article class="card">
-              <p class="muted" style="margin-top: 0">
-                “I finally understood cloud fundamentals and built projects I can show. The weekly structure kept me
-                accountable.”
-              </p>
-              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
-              <p class="muted" style="margin: 6px 0 0">Solution Architect • 10-week cohort</p>
-            </article>
-
-            <article class="card">
-              <p class="muted" style="margin-top: 0">
-                “Hands-on labs + support = results. The portfolio guidance and interview prep were the game-changer.”
-              </p>
-              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
-              <p class="muted" style="margin: 6px 0 0">DevOps Engineer • 12-week cohort</p>
-            </article>
-
-            <article class="card">
-              <p class="muted" style="margin-top: 0">
-                “Clear lessons, practical projects, and real feedback. I moved from curiosity to building and shipping.”
-              </p>
-              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
-              <p class="muted" style="margin: 6px 0 0">AI for Engineers • 8-week cohort</p>
-            </article>
-          </div>
-
-          <div class="inline-actions" style="margin-top: 16px">
-            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost" href="contact.html">Speak to an Advisor</a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer (same as your index.html) -->
+    <!-- Footer (same as index) -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -339,7 +413,7 @@
     </footer>
 
     <script>
-      // Mobile nav toggle (same behavior as index.html)
+      // Mobile nav toggle
       const toggle = document.querySelector(".nav-toggle");
       const nav = document.querySelector(".nav");
       if (toggle && nav) {
@@ -352,124 +426,5 @@
       // Footer year
       document.getElementById("year").textContent = String(new Date().getFullYear());
     </script>
-
-    <!-- Page-local styles ONLY (does not change your global theme/colors) -->
-    <style>
-      .t-page-title {
-        margin: 0 0 8px;
-        font-size: 34px;
-        letter-spacing: -0.02em;
-      }
-
-      .t-page-sub {
-        margin: 0;
-        max-width: 80ch;
-      }
-
-      /* Video cards (thumbnail approach = no black side pillars) */
-      .t-video-grid {
-        display: grid;
-        gap: 14px;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      }
-
-      .t-video-card {
-        display: block;
-        border-radius: 18px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-      }
-
-      .t-video-card:focus-visible {
-        outline: 2px solid rgba(199, 173, 115, 0.45);
-        outline-offset: 3px;
-      }
-
-      .t-video-thumb {
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 */
-        background: rgba(0, 0, 0, 0.25);
-      }
-
-      .t-video-thumb img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .t-play {
-        position: absolute;
-        left: 14px;
-        bottom: 14px;
-        width: 44px;
-        height: 44px;
-        border-radius: 999px;
-        display: grid;
-        place-items: center;
-        font-size: 16px;
-        background: rgba(6, 18, 12, 0.75);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-      }
-
-      .t-video-meta {
-        padding: 12px 12px 14px;
-      }
-
-      .t-video-title {
-        font-weight: 900;
-        letter-spacing: 0.2px;
-        margin-bottom: 4px;
-      }
-
-      /* Alumni images */
-      .t-alumni-grid {
-        display: grid;
-        gap: 14px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      }
-
-      .t-alumni-item {
-        margin: 0;
-        border-radius: 18px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.05);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
-      }
-
-      .t-alumni-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      /* Class gallery */
-      .t-gallery-grid {
-        display: grid;
-        gap: 12px;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .t-gallery-item {
-        margin: 0;
-        border-radius: 18px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .t-gallery-item img {
-        width: 100%;
-        height: 190px;
-        object-fit: cover;
-        display: block;
-      }
-    </style>
   </body>
 </html>
