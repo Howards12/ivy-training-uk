@@ -29,15 +29,14 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header -->
+    <!-- Header (streamlined + only working tabs) -->
     <header class="site-header">
-      <div class="container header-inner header-simple">
+      <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-            <!-- FIX: keep on one line -->
-            <div class="brand-tag brand-tag--singleline">Cloud • DevOps • Data Science • AI</div>
+            <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
 
@@ -45,15 +44,15 @@
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="nav nav-simple" aria-label="Primary navigation">
-          <div class="nav-links nav-links-simple">
+        <nav class="nav" aria-label="Primary navigation">
+          <div class="nav-links">
             <a href="courses.html">Courses</a>
             <a href="testimonials.html">Testimonials</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </div>
 
-          <div class="nav-cta nav-cta-simple">
+          <div class="nav-cta">
             <a class="btn btn-ghost" href="courses.html">View Courses</a>
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
           </div>
@@ -88,7 +87,7 @@
             </div>
           </div>
 
-          <!-- HERO CARD (your Google Ad image) -->
+          <!-- Your Google Ad / Banner inside hero (clickable hotspot over "Enroll Now") -->
           <div class="hero-card hero-card--ad" role="img" aria-label="Ivy Training banner">
             <img
               src="assets/hero.jpg"
@@ -96,18 +95,13 @@
               loading="eager"
             />
 
-            <!-- Clickable HOTSPOT placed over the 'Enroll Now' button inside the image -->
-            <a
-              class="hero-ad-hotspot"
-              href="contact.html"
-              aria-label="Enroll Now"
-              title="Enroll Now"
-            ></a>
+            <!-- Hotspot: click the banner's Enroll Now -->
+            <a class="hero-ad-hotspot" href="contact.html" aria-label="Enroll Now" title="Enroll Now"></a>
           </div>
         </div>
       </section>
 
-      <!-- ALUMNI HIGHLIGHTS -->
+      <!-- ALUMNI HIGHLIGHTS (full images visible + hover zoom OUT) -->
       <section class="section section-tight" id="alumni">
         <div class="container">
           <div class="section-head section-head-tight">
@@ -124,7 +118,7 @@
           </div>
 
           <div class="alumni-grid">
-            <article class="alumni-card alumni-card--zoomout">
+            <article class="alumni-card" tabindex="0">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
               </div>
@@ -134,7 +128,7 @@
               </div>
             </article>
 
-            <article class="alumni-card alumni-card--zoomout">
+            <article class="alumni-card" tabindex="0">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
               </div>
@@ -144,7 +138,7 @@
               </div>
             </article>
 
-            <article class="alumni-card alumni-card--zoomout">
+            <article class="alumni-card" tabindex="0">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
               </div>
@@ -154,7 +148,7 @@
               </div>
             </article>
 
-            <article class="alumni-card alumni-card--zoomout">
+            <article class="alumni-card" tabindex="0">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
               </div>
@@ -165,14 +159,14 @@
             </article>
           </div>
 
-          <div class="alumni-strip-actions">
+          <div class="alumni-actions">
             <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
             <a class="btn btn-ghost btn-sm" href="testimonials.html">See all testimonials</a>
           </div>
         </div>
       </section>
 
-      <!-- Choose Your Track -->
+      <!-- CHOOSE YOUR TRACK -->
       <section class="section" id="tracks">
         <div class="container">
           <div class="section-head">
@@ -295,7 +289,7 @@
         </div>
 
         <div>
-          <div class="footer-title">Prospective Students</div>
+          <div class="footer-title">Explore</div>
           <ul class="footer-links">
             <li><a href="courses.html">Courses</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
@@ -328,6 +322,7 @@
     </footer>
 
     <script>
+      // Mobile nav toggle
       const toggle = document.querySelector(".nav-toggle");
       const nav = document.querySelector(".nav");
       if (toggle && nav) {
@@ -336,7 +331,10 @@
           toggle.setAttribute("aria-expanded", String(isOpen));
         });
       }
-      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      // Footer year
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
     </script>
   </body>
 </html>
