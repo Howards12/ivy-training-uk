@@ -518,3 +518,36 @@ height: 190px;
 object-fit: cover;
 display: block;
 }
+/* ================================
+   Testimonials: Class-in-session sizing fix
+   ================================ */
+
+.class-session-wrap {
+  margin-top: 18px;
+  display: grid;
+  place-items: center;
+}
+
+.class-session-card {
+  width: min(760px, 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.30);
+}
+
+.class-session-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.class-session-caption {
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
