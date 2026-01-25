@@ -35,10 +35,8 @@
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
-            <!-- FIX: Keep this title in one line and clean -->
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-
-            <!-- FIX: Put Cloud, DevOps, Data Science, AI on ONE LINE -->
+            <!-- FIX: keep on one line -->
             <div class="brand-tag brand-tag--singleline">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
@@ -62,20 +60,6 @@
         </nav>
       </div>
     </header>
-
-    <!-- TOP GOOGLE ADS BANNER (Enroll Now must be clickable) -->
-    <section class="top-ad" aria-label="Promotional banner">
-      <div class="container">
-        <div class="top-ad-card">
-          <img src="assets/Google%20ad.jpg" alt="Ivy Training promotional banner" loading="eager" />
-
-          <!-- Make this a REAL button, always clickable -->
-          <a class="top-ad-cta" href="contact.html">
-            Enroll Now
-          </a>
-        </div>
-      </div>
-    </section>
 
     <main id="main">
       <!-- HERO -->
@@ -104,12 +88,21 @@
             </div>
           </div>
 
-          <div class="hero-card" role="img" aria-label="Ivy Training preview image">
+          <!-- HERO CARD (your Google Ad image) -->
+          <div class="hero-card hero-card--ad" role="img" aria-label="Ivy Training banner">
             <img
               src="assets/hero.jpg"
               alt="Ivy Training & Consulting UK banner showing Cloud, DevOps, Data Science, and AI training"
               loading="eager"
             />
+
+            <!-- Clickable HOTSPOT placed over the 'Enroll Now' button inside the image -->
+            <a
+              class="hero-ad-hotspot"
+              href="contact.html"
+              aria-label="Enroll Now"
+              title="Enroll Now"
+            ></a>
           </div>
         </div>
       </section>
