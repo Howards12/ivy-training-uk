@@ -29,14 +29,17 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (streamlined nav — only relevant working tabs) -->
+    <!-- Header -->
     <header class="site-header">
       <div class="container header-inner header-simple">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
+            <!-- FIX: Keep this title in one line and clean -->
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-            <div class="brand-tag brand-tag--nowrap">Cloud • DevOps • Data Science • AI</div>
+
+            <!-- FIX: Put Cloud, DevOps, Data Science, AI on ONE LINE -->
+            <div class="brand-tag brand-tag--singleline">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
 
@@ -60,15 +63,14 @@
       </div>
     </header>
 
-    <!-- TOP GOOGLE ADS BANNER (functional Enroll Now link) -->
+    <!-- TOP GOOGLE ADS BANNER (Enroll Now must be clickable) -->
     <section class="top-ad" aria-label="Promotional banner">
       <div class="container">
         <div class="top-ad-card">
-          <!-- Use your actual banner image filename here -->
           <img src="assets/Google%20ad.jpg" alt="Ivy Training promotional banner" loading="eager" />
 
-          <!-- Visible clickable text (required) -->
-          <a class="top-ad-cta" href="contact.html" aria-label="Enroll now and go to the enrollment form">
+          <!-- Make this a REAL button, always clickable -->
+          <a class="top-ad-cta" href="contact.html">
             Enroll Now
           </a>
         </div>
@@ -112,7 +114,7 @@
         </div>
       </section>
 
-      <!-- ALUMNI PHOTO TESTIMONIALS (paths fixed + no cropping) -->
+      <!-- ALUMNI HIGHLIGHTS -->
       <section class="section section-tight" id="alumni">
         <div class="container">
           <div class="section-head section-head-tight">
@@ -129,7 +131,7 @@
           </div>
 
           <div class="alumni-grid">
-            <article class="alumni-card">
+            <article class="alumni-card alumni-card--zoomout">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
               </div>
@@ -139,7 +141,7 @@
               </div>
             </article>
 
-            <article class="alumni-card">
+            <article class="alumni-card alumni-card--zoomout">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
               </div>
@@ -149,7 +151,7 @@
               </div>
             </article>
 
-            <article class="alumni-card">
+            <article class="alumni-card alumni-card--zoomout">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
               </div>
@@ -159,7 +161,7 @@
               </div>
             </article>
 
-            <article class="alumni-card">
+            <article class="alumni-card alumni-card--zoomout">
               <div class="alumni-media">
                 <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
               </div>
@@ -177,7 +179,7 @@
         </div>
       </section>
 
-      <!-- COURSE PATHS (order preserved) -->
+      <!-- Choose Your Track -->
       <section class="section" id="tracks">
         <div class="container">
           <div class="section-head">
@@ -268,37 +270,6 @@
               <h3 class="panel-title">CTA for students</h3>
               <p class="muted">Want to graduate with a strong portfolio project?</p>
               <a class="btn btn-primary btn-block" href="contact.html">Book a Consultation</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- RECRUITMENT ASSISTANCE -->
-      <section class="section">
-        <div class="container">
-          <div class="two-col">
-            <div class="panel">
-              <h3 class="panel-title">Recruitment Assistance</h3>
-              <p class="muted">
-                We help you position your skills: CV improvements, interview preparation, and guidance for your next role.
-              </p>
-              <ul class="list">
-                <li>CV and LinkedIn optimisation</li>
-                <li>Mock interviews and technical prep</li>
-                <li>Role-focused study & project recommendations</li>
-              </ul>
-              <a class="btn btn-primary btn-block" href="contact.html">Get Career Support</a>
-            </div>
-
-            <div>
-              <h2>Support that continues beyond the class.</h2>
-              <p class="muted">
-                You don’t just “finish a course” — you build confidence, get feedback, and prepare for real interviews.
-              </p>
-              <div class="inline-actions">
-                <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-                <a class="btn btn-ghost" href="testimonials.html">See outcomes</a>
-              </div>
             </div>
           </div>
         </div>
