@@ -29,14 +29,14 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (streamlined + only working/relevant tabs) -->
+    <!-- Header (streamlined nav — only relevant working tabs) -->
     <header class="site-header">
       <div class="container header-inner header-simple">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-            <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
+            <div class="brand-tag brand-tag--nowrap">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
 
@@ -59,6 +59,21 @@
         </nav>
       </div>
     </header>
+
+    <!-- TOP GOOGLE ADS BANNER (functional Enroll Now link) -->
+    <section class="top-ad" aria-label="Promotional banner">
+      <div class="container">
+        <div class="top-ad-card">
+          <!-- Use your actual banner image filename here -->
+          <img src="assets/Google%20ad.jpg" alt="Ivy Training promotional banner" loading="eager" />
+
+          <!-- Visible clickable text (required) -->
+          <a class="top-ad-cta" href="contact.html" aria-label="Enroll now and go to the enrollment form">
+            Enroll Now
+          </a>
+        </div>
+      </div>
+    </section>
 
     <main id="main">
       <!-- HERO -->
@@ -97,7 +112,7 @@
         </div>
       </section>
 
-      <!-- ALUMNI PHOTO TESTIMONIALS (show full images, no cropping) -->
+      <!-- ALUMNI PHOTO TESTIMONIALS (paths fixed + no cropping) -->
       <section class="section section-tight" id="alumni">
         <div class="container">
           <div class="section-head section-head-tight">
@@ -116,7 +131,7 @@
           <div class="alumni-grid">
             <article class="alumni-card">
               <div class="alumni-media">
-                <img src="assets/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
+                <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
               </div>
               <div class="alumni-meta">
                 <div class="alumni-name">Ikay U.</div>
@@ -126,7 +141,7 @@
 
             <article class="alumni-card">
               <div class="alumni-media">
-                <img src="assets/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
+                <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
               </div>
               <div class="alumni-meta">
                 <div class="alumni-name">Adelia Manuel</div>
@@ -136,7 +151,7 @@
 
             <article class="alumni-card">
               <div class="alumni-media">
-                <img src="assets/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
+                <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
               </div>
               <div class="alumni-meta">
                 <div class="alumni-name">Thelma N.</div>
@@ -146,7 +161,7 @@
 
             <article class="alumni-card">
               <div class="alumni-media">
-                <img src="assets/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
+                <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
               </div>
               <div class="alumni-meta">
                 <div class="alumni-name">Gideon Aiyegunle</div>
@@ -225,20 +240,6 @@
               </div>
             </article>
           </div>
-        </div>
-      </section>
-
-      <!-- PREMIUM BANNER SECTION (unchanged; your hotspot keeps working) -->
-      <section class="section section-banner-tight">
-        <div class="container">
-          <div class="banner banner--tight">
-            <img src="assets/Google%20ad.jpg" alt="Ivy Training promotional banner" loading="lazy" />
-            <a class="banner-hotspot" href="contact.html" aria-label="Enroll Now" title="Enroll Now"></a>
-          </div>
-
-          <p class="muted banner-note">
-            Ready to join the next cohort? Enroll now and we’ll respond with schedule, pricing, and onboarding steps.
-          </p>
         </div>
       </section>
 
