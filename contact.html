@@ -1,100 +1,202 @@
-<section class="section" id="enroll">
-  <div class="container">
-    <div class="grid grid--two" style="align-items:start;">
-      <!-- Formspree Form -->
-      <div class="panel">
-        <h2 style="margin-top:0;">Enroll / Book Consultation</h2>
-        <p class="muted">
-          Fill this form and we’ll reply by email with next steps, cohort dates, and payment details.
-        </p>
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <form action="https://formspree.io/f/mlgjbrwj" method="POST" style="margin-top:14px;">
-          <!-- Custom email subject -->
-          <input type="hidden" name="_subject" value="New Ivy Training & Consulting UK Inquiry" />
+<title>Enroll / Book Consultation | Ivy Training & Consulting UK</title>
+<meta
+name="description"
+content="Enroll or book a consultation with Ivy Training & Consulting UK. Tell us your goal, preferred track, and timeline — we’ll respond with next steps."
+/>
 
-          <!-- Honeypot spam protection (leave as-is) -->
-          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+<meta name="theme-color" content="#0b1510" />
+<link rel="icon" href="assets/logo.jpg" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
 
-          <div class="form-grid">
-            <div>
-              <label class="label" for="fullName">Full name</label>
-              <input class="input" id="fullName" name="name" placeholder="Your full name" required />
-            </div>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-            <div>
-              <label class="label" for="email">Email</label>
-              <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
-            </div>
-          </div>
+<!-- Header (same streamlined header) -->
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
+<img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
+<div class="brand-text">
+<div class="brand-name">Ivy Training &amp; Consulting UK</div>
+<div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
+</div>
+</a>
 
-          <div style="margin-top:12px;">
-            <label class="label" for="interest">What do you need?</label>
-            <select class="input" id="interest" name="interest" required>
-              <option value="" disabled selected>Select an option</option>
-              <option>Enroll (Cloud Computing)</option>
-              <option>Enroll (DevOps Engineering)</option>
-              <option>Enroll (AI for Engineers)</option>
-              <option>Corporate / Consulting</option>
-              <option>General question</option>
-            </select>
-          </div>
+<button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
 
-          <div class="form-grid" style="margin-top:12px;">
-            <div>
-              <label class="label" for="schedule">Preferred schedule</label>
-              <select class="input" id="schedule" name="schedule">
-                <option>Weekday evenings</option>
-                <option>Weekends</option>
-                <option>Flexible / Self-paced</option>
-              </select>
-            </div>
+<nav class="nav" aria-label="Primary navigation">
+<div class="nav-groups">
+<div class="nav-group">
+<span class="nav-group-label">Prospective Students</span>
+<div class="nav-links">
+<a href="courses.html">Course Info</a>
+<a href="testimonials.html">Testimonials</a>
+<a href="about.html">About</a>
+</div>
+</div>
 
-            <div>
-              <label class="label" for="experience">Current level</label>
-              <select class="input" id="experience" name="experience">
-                <option>Beginner</option>
-                <option>Intermediate</option>
-                <option>Advanced</option>
-              </select>
-            </div>
-          </div>
+<div class="nav-group">
+<span class="nav-group-label">Support</span>
+<div class="nav-links">
+<a href="contact.html" aria-current="page">Book Consultation</a>
+</div>
+</div>
+</div>
 
-          <div style="margin-top:12px;">
-            <label class="label" for="message">Message</label>
-            <textarea
-              class="input"
-              id="message"
-              name="message"
-              rows="6"
-              placeholder="Tell us your goal, background, and any deadlines (job switch, certification, etc.)…"
-              required
-            ></textarea>
-          </div>
+<div class="nav-cta">
+<a class="btn btn-ghost" href="courses.html">View Courses</a>
+<a class="btn btn-primary" href="contact.html">Enroll Now</a>
+</div>
+</nav>
+</div>
+</header>
 
-          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
-            <button class="btn btn--primary" type="submit">Enroll Now</button>
-            <a class="btn btn--ghost" href="courses.html">View Course Info</a>
-          </div>
-
-          <p class="muted" style="margin-top:12px; font-size:14px;">
-            By submitting, you agree to be contacted about your inquiry. (GDPR-friendly messaging goes in your Privacy page.)
-          </p>
-        </form>
-      </div>
-
-      <!-- What happens next -->
-      <div class="panel">
-        <h2 style="margin-top:0;">What happens next</h2>
-        <ul class="list" style="padding-left:18px; line-height:1.85;">
-          <li>We review your goal and recommend the best track (Cloud, DevOps, or AI).</li>
-          <li>We confirm the next cohort date and weekly schedule.</li>
-          <li>You receive onboarding steps, tools setup, and learning resources.</li>
-        </ul>
-
-        <div class="notice" style="margin-top:14px;">
-          Prefer email? Reach us at <strong>ivytrainingcouk@gmail.com</strong>
-        </div>
-      </div>
-    </div>
-  </div>
+<main id="main">
+<section class="section section-tight">
+<div class="container">
+<div class="section-head section-head-tight">
+<div>
+<h1 style="margin: 0 0 8px; font-size: 34px; letter-spacing: -0.02em">
+Enroll / Book Consultation
+</h1>
+<p class="muted" style="margin: 0; max-width: 80ch">
+Tell us your goal, preferred track, and timeline. We’ll respond with next steps, cohort availability,
+and onboarding details.
+</p>
+</div>
+</div>
+</div>
 </section>
+
+<section class="section">
+<div class="container form-shell">
+<div class="form-card">
+<!-- Formspree endpoint -->
+<form action="https://formspree.io/f/mlgjbrwj" method="POST">
+<div class="form-grid">
+<div>
+<label class="label" for="name">Full name</label>
+<input class="input" id="name" name="name" type="text" placeholder="Your name" required />
+</div>
+
+<div>
+<label class="label" for="email">Email</label>
+<input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+</div>
+
+<div>
+<label class="label" for="phone">Phone (optional)</label>
+<input class="input" id="phone" name="phone" type="tel" placeholder="+44 ..." />
+</div>
+
+<div>
+<label class="label" for="track">Preferred track</label>
+<select class="input" id="track" name="track" required>
+<option value="" selected disabled>Select a track</option>
+<option>Solution Architect</option>
+<option>Data Science</option>
+<option>AI Practitioner</option>
+<option>Cloud Engineer</option>
+<option>DevOps Engineer</option>
+<option>AI for Engineers</option>
+</select>
+</div>
+</div>
+
+<div style="margin-top: 12px">
+<label class="label" for="timeline">Timeline</label>
+<select class="input" id="timeline" name="timeline" required>
+<option value="" selected disabled>When do you want to start?</option>
+<option>Immediately (next available cohort)</option>
+<option>Within 2–4 weeks</option>
+<option>Within 1–2 months</option>
+<option>Not sure yet (need guidance)</option>
+</select>
+</div>
+
+<div style="margin-top: 12px">
+<label class="label" for="message">Tell us your goal (optional)</label>
+<textarea id="message" name="message" placeholder="Example: I want to transition into cloud engineering and need a structured plan + portfolio project."></textarea>
+</div>
+
+<div class="inline-actions" style="margin-top: 14px">
+<button class="btn btn-primary" type="submit">Submit</button>
+<a class="btn btn-ghost" href="courses.html">View Course Info</a>
+</div>
+
+<p class="muted" style="margin: 12px 0 0; font-size: 13px">
+By submitting, you agree we can contact you about cohorts and onboarding. (GDPR placeholder applies.)
+</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer (same as site) -->
+<footer class="site-footer">
+<div class="container footer-grid">
+<div>
+<div class="footer-brand">Ivy Training &amp; Consulting UK</div>
+<p class="muted">
+Instructor-led training in Cloud, DevOps and AI with practical projects and career support.
+</p>
+<p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
+</div>
+
+<div>
+<div class="footer-title">Prospective Students</div>
+<ul class="footer-links">
+<li><a href="courses.html">Course Info</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="about.html">About</a></li>
+</ul>
+</div>
+
+<div>
+<div class="footer-title">Support</div>
+<ul class="footer-links">
+<li><a href="contact.html">Book Consultation</a></li>
+<li><a href="corporate.html">Corporate / Consulting</a></li>
+</ul>
+</div>
+
+<div>
+<div class="footer-title">Trust &amp; Compliance</div>
+<ul class="footer-links">
+<li><a href="student-handbook.html">Student Handbook</a></li>
+<li><a href="gdpr.html">GDPR</a></li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
+</ul>
+</div>
+</div>
+
+<div class="container footer-bottom">
+<span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK. All rights reserved.</span>
+</div>
+</footer>
+
+<script>
+const toggle = document.querySelector(".nav-toggle");
+const nav = document.querySelector(".nav");
+if (toggle && nav) {
+toggle.addEventListener("click", () => {
+const isOpen = nav.classList.toggle("nav-open");
+toggle.setAttribute("aria-expanded", String(isOpen));
+});
+}
+document.getElementById("year").textContent = String(new Date().getFullYear());
+</script>
+</body>
+</html>
+
