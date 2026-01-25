@@ -3,197 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Alumni Testimonials | Ivy Training & Consulting UK</title>
+
+    <title>Testimonials | Ivy Training & Consulting UK</title>
     <meta
       name="description"
-      content="Watch alumni stories, explore real class-in-session moments, and read student testimonials from Ivy Training & Consulting UK."
+      content="Watch Ivy Training & Consulting UK alumni stories, browse class-in-session highlights, and read student testimonials from Cloud, DevOps, and AI cohorts."
     />
 
     <!-- OpenGraph -->
-    <meta property="og:title" content="Alumni Testimonials | Ivy Training & Consulting UK" />
+    <meta property="og:title" content="Testimonials | Ivy Training & Consulting UK" />
     <meta
       property="og:description"
-      content="Watch alumni stories, explore class-in-session moments, and read student testimonials."
+      content="Hear from alumni, view class-in-session highlights, and explore student testimonials."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/hero-clean.jpg" />
+    <meta property="og:url" content="https://www.ivytrainingco.uk/testimonials.html" />
+    <meta property="og:image" content="assets/hero.jpg" />
+
+    <meta name="theme-color" content="#0b1510" />
 
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
-
-    <style>
-      /* Page-only helpers (keeps your site background/colors intact) */
-      .page {
-        padding: 96px 0 64px;
-      }
-      .page-hero {
-        padding: 48px 0 28px;
-      }
-      .page-hero h1 {
-        margin: 0 0 12px;
-        line-height: 1.05;
-        letter-spacing: -0.02em;
-      }
-      .page-hero p {
-        margin: 0;
-        max-width: 70ch;
-        opacity: 0.92;
-      }
-
-      .section {
-        padding: 36px 0;
-      }
-      .section-title {
-        display: flex;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 18px;
-      }
-      .section-title h2 {
-        margin: 0;
-        font-size: 28px;
-        letter-spacing: -0.01em;
-      }
-      .section-title .sub {
-        margin: 0;
-        opacity: 0.8;
-        font-size: 14px;
-      }
-
-      .grid {
-        display: grid;
-        gap: 18px;
-      }
-
-      .video-grid {
-        grid-template-columns: repeat(12, 1fr);
-      }
-      .video-card {
-        grid-column: span 12;
-        border-radius: 18px;
-        overflow: hidden;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-      }
-      @media (min-width: 900px) {
-        .video-card {
-          grid-column: span 4;
-        }
-      }
-      .video-frame {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 9 / 16; /* Shorts-friendly */
-        background: rgba(0, 0, 0, 0.25);
-      }
-      .video-frame iframe {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-      }
-      .video-meta {
-        padding: 14px 14px 16px;
-      }
-      .video-meta h3 {
-        margin: 0 0 6px;
-        font-size: 16px;
-      }
-      .video-meta p {
-        margin: 0;
-        font-size: 13px;
-        opacity: 0.85;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(12, 1fr);
-      }
-      .shot {
-        grid-column: span 12;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.03);
-      }
-      @media (min-width: 900px) {
-        .shot {
-          grid-column: span 4;
-        }
-      }
-      .shot img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        display: block;
-      }
-      .shot .cap {
-        padding: 12px 12px 14px;
-        font-size: 13px;
-        opacity: 0.88;
-      }
-
-      .testimonial-grid {
-        grid-template-columns: repeat(12, 1fr);
-      }
-      .t-card {
-        grid-column: span 12;
-        border-radius: 18px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.03);
-        box-shadow: 0 12px 34px rgba(0, 0, 0, 0.32);
-      }
-      @media (min-width: 900px) {
-        .t-card {
-          grid-column: span 6;
-        }
-      }
-      .t-card img {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
-        display: block;
-      }
-      .t-body {
-        padding: 16px 16px 18px;
-      }
-      .t-body p {
-        margin: 0 0 12px;
-        font-size: 14px;
-        line-height: 1.6;
-        opacity: 0.92;
-      }
-      .t-person {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        opacity: 0.9;
-        font-size: 13px;
-      }
-
-      .cta-row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 18px;
-      }
-
-      /* Make sure in-page anchor offset respects fixed header */
-      :target {
-        scroll-margin-top: 92px;
-      }
-    </style>
   </head>
 
   <body>
-    <!-- Header (keeps same structure as your site) -->
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header (same as index.html) -->
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK">
+        <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
@@ -201,83 +41,354 @@
           </div>
         </a>
 
-        <nav class="nav" aria-label="Primary">
-          <div class="nav-group">
-            <span class="nav-label">PROSPECTIVE STUDENTS</span>
-            <a class="nav-link" href="courses.html">Course Info</a>
-            <a class="nav-link active" href="testimonials.html" aria-current="page">Testimonials</a>
-            <a class="nav-link" href="professionals.html">Working Professionals</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <div class="nav-groups">
+            <div class="nav-group">
+              <span class="nav-group-label">Prospective Students</span>
+              <div class="nav-links">
+                <a href="courses.html">Course Info</a>
+                <a href="professionals.html">Working Professionals</a>
+                <a href="about.html">About</a>
+                <a href="testimonials.html" class="is-new" aria-current="page">Testimonials</a>
+              </div>
+            </div>
+
+            <div class="nav-group">
+              <span class="nav-group-label">Support</span>
+              <div class="nav-links">
+                <a href="corporate.html">Consulting / Corporate</a>
+                <a href="contact.html">Book Consultation</a>
+              </div>
+            </div>
           </div>
 
-          <div class="nav-divider" aria-hidden="true"></div>
-
-          <div class="nav-group">
-            <span class="nav-label">SUPPORT</span>
-            <a class="nav-link" href="corporate.html">Consulting / Corporate</a>
-            <a class="nav-link nav-cta" href="contact.html">Book Consultation</a>
+          <div class="nav-cta">
+            <a class="btn btn-ghost" href="courses.html">View Courses</a>
+            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
           </div>
         </nav>
-
-        <div class="header-actions">
-          <a class="btn btn-ghost" href="courses.html">View Courses</a>
-          <a class="btn btn-gold" href="courses.html#enroll">Enroll Now</a>
-        </div>
       </div>
     </header>
 
-    <main class="page">
-      <section class="page-hero">
+    <main id="main">
+      <!-- Page intro (minimal so it doesn't change your site look) -->
+      <section class="section section-tight">
         <div class="container">
-          <h1>Testimonials</h1>
-          <p>
-            Real stories from real students. Watch alumni shorts, browse “class in session” snapshots, and read
-            written testimonials.
-          </p>
-          <div class="cta-row">
-            <a class="btn btn-gold" href="courses.html#enroll">Enroll Now</a>
-            <a class="btn btn-ghost" href="#alumni-videos">Watch Videos</a>
-            <a class="btn btn-ghost" href="#written-testimonials">Read Testimonials</a>
+          <div class="section-head section-head-tight">
+            <div>
+              <h1 style="margin: 0 0 8px; font-size: 34px; letter-spacing: -0.02em">
+                Testimonials
+              </h1>
+              <p class="muted" style="margin: 0; max-width: 80ch">
+                Watch short alumni stories, browse “class in session” highlights, and read what students are saying
+                about our Cloud, DevOps, and AI cohorts.
+              </p>
+            </div>
+
+            <div class="section-actions">
+              <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
+              <a class="btn btn-ghost btn-sm" href="courses.html">Explore Course Info</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Alumni Videos -->
-      <section id="alumni-videos" class="section">
+      <!-- Alumni videos -->
+      <section class="section" id="alumni-videos">
         <div class="container">
-          <div class="section-title">
-            <h2>Alumni Video Stories</h2>
-            <p class="sub">Short, honest feedback from our graduates</p>
+          <div class="section-head">
+            <div>
+              <h2>Alumni Stories</h2>
+              <p class="muted">Short videos from alumni sharing their experience, progress, and outcomes.</p>
+            </div>
           </div>
 
-          <div class="grid video-grid">
-            <!-- Tip: using youtube-nocookie for privacy-friendly embeds -->
-            <article class="video-card">
-              <div class="video-frame">
+          <!-- Uses simple “cards” so it fits your current CSS -->
+          <div class="cards">
+            <article class="card">
+              <div class="embed-16x9">
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/LT2BiNrW-SM"
-                  title="Alumni story #1"
+                  title="Alumni story 1 - Ivy Training & Consulting UK"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                  loading="lazy"
                 ></iframe>
               </div>
-              <div class="video-meta">
-                <h3>Alumni Story #1</h3>
-                <p>Top-rated testimonial (Shorts)</p>
-              </div>
+              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
+                Alumni Story #1
+              </p>
             </article>
 
-            <article class="video-card">
-              <div class="video-frame">
+            <article class="card">
+              <div class="embed-16x9">
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/5sa1jjuHkBc"
-                  title="Alumni story #2"
+                  title="Alumni story 2 - Ivy Training & Consulting UK"
+                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                  loading="lazy"
                 ></iframe>
               </div>
-              <div class="video-meta">
-                <h3>Alumni Story #2</h3 hookup;
+              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
+                Alumni Story #2
+              </p>
+            </article>
 
-::contentReference[oaicite:0]{index=0}
+            <article class="card">
+              <div class="embed-16x9">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/9a-QZwm6Gqc"
+                  title="Alumni story 3 - Ivy Training & Consulting UK"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
+                Alumni Story #3
+              </p>
+            </article>
+          </div>
+
+          <div class="inline-actions" style="margin-top: 16px">
+            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
+            <a class="btn btn-ghost" href="contact.html">Book Consultation</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo testimonials (same assets you generated) -->
+      <section class="section" id="photo-testimonials">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Featured Alumni</h2>
+              <p class="muted">A few highlight testimonials from graduates.</p>
+            </div>
+          </div>
+
+          <div class="alumni-feature-grid">
+            <figure class="alumni-feature">
+              <img src="assets/alumni-1.jpg" alt="Ikay U. testimonial" loading="lazy" />
+            </figure>
+
+            <figure class="alumni-feature">
+              <img src="assets/alumni-2.jpg" alt="Adelia Manuel testimonial" loading="lazy" />
+            </figure>
+
+            <figure class="alumni-feature">
+              <img src="assets/alumni-3.jpg" alt="Thelma N. testimonial" loading="lazy" />
+            </figure>
+
+            <figure class="alumni-feature">
+              <img src="assets/alumni-4.jpg" alt="Gideon Aiyegunle testimonial" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Class in session gallery -->
+      <section class="section" id="class-in-session">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>Class in Session</h2>
+              <p class="muted">Snapshots from live sessions and cohort learning (Zoom screenshots).</p>
+            </div>
+          </div>
+
+          <!-- NOTE: replace filenames with your real ones if different -->
+          <div class="gallery-grid">
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-1.jpg" alt="Zoom training session with multiple students" loading="lazy" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-2.jpg" alt="Instructor-led live training session on Zoom" loading="lazy" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-3.jpg" alt="Cloud engineering cohort Zoom session screenshot" loading="lazy" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-4.jpg" alt="DevOps cohort Zoom session screenshot" loading="lazy" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-5.jpg" alt="AI training session Zoom screenshot" loading="lazy" />
+            </figure>
+            <figure class="gallery-item">
+              <img src="assets/class/zoom-6.jpg" alt="Group learning session on Zoom" loading="lazy" />
+            </figure>
+          </div>
+
+          <p class="muted" style="margin-top: 12px">
+            Want to be part of the next cohort? <a class="link" href="contact.html">Enroll now →</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- Written testimonials (placeholders you can replace anytime) -->
+      <section class="section" id="written">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <h2>What Students Are Saying</h2>
+              <p class="muted">Written feedback from students across Cloud, DevOps, and AI programs.</p>
+            </div>
+          </div>
+
+          <div class="cards">
+            <article class="card">
+              <p class="muted" style="margin-top: 0">
+                “I finally understood cloud fundamentals and built projects I can show. The weekly structure kept me
+                accountable.”
+              </p>
+              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
+              <p class="muted" style="margin: 6px 0 0">Cloud Computing • 10-week cohort</p>
+            </article>
+
+            <article class="card">
+              <p class="muted" style="margin-top: 0">
+                “Hands-on labs + support = results. The portfolio guidance and interview prep were the game-changer.”
+              </p>
+              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
+              <p class="muted" style="margin: 6px 0 0">DevOps Engineering • 12-week cohort</p>
+            </article>
+
+            <article class="card">
+              <p class="muted" style="margin-top: 0">
+                “Clear lessons, practical projects, and real feedback. I moved from curiosity to building and shipping.”
+              </p>
+              <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
+              <p class="muted" style="margin: 6px 0 0">AI for Engineers • 8-week cohort</p>
+            </article>
+          </div>
+
+          <div class="inline-actions" style="margin-top: 16px">
+            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
+            <a class="btn btn-ghost" href="contact.html">Speak to an Advisor</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">Ivy Training &amp; Consulting UK</div>
+          <p class="muted">
+            Instructor-led training in Cloud, DevOps and AI with practical projects and career support.
+          </p>
+          <p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
+        </div>
+
+        <div>
+          <div class="footer-title">Prospective Students</div>
+          <ul class="footer-links">
+            <li><a href="courses.html">Course Info</a></li>
+            <li><a href="professionals.html">Working Professionals</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Book Consultation</a></li>
+            <li><a href="corporate.html">Corporate / Consulting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Trust &amp; Compliance</div>
+          <ul class="footer-links">
+            <li><a href="student-handbook.html">Student Handbook</a></li>
+            <li><a href="gdpr.html">GDPR</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile nav toggle (same behavior as index.html)
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+
+      // Footer year
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+
+    <!-- Small page-only styles to support gallery + embeds WITHOUT changing your global UI -->
+    <style>
+      .embed-16x9 {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.25);
+      }
+      .embed-16x9 iframe {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .alumni-feature-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .alumni-feature {
+        margin: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .alumni-feature img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .gallery-grid {
+        display: grid;
+        gap: 12px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .gallery-item {
+        margin: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
+  </body>
+</html>
