@@ -29,9 +29,9 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (streamlined nav — less choking) -->
+    <!-- Header (streamlined + only working/relevant tabs) -->
     <header class="site-header">
-      <div class="container header-inner">
+      <div class="container header-inner header-simple">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
@@ -44,26 +44,15 @@
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="nav" aria-label="Primary navigation">
-          <div class="nav-groups">
-            <div class="nav-group">
-              <span class="nav-group-label">Prospective Students</span>
-              <div class="nav-links">
-                <a href="courses.html">Course Info</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="about.html">About</a>
-              </div>
-            </div>
-
-            <div class="nav-group">
-              <span class="nav-group-label">Support</span>
-              <div class="nav-links">
-                <a href="contact.html">Book Consultation</a>
-              </div>
-            </div>
+        <nav class="nav nav-simple" aria-label="Primary navigation">
+          <div class="nav-links nav-links-simple">
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
           </div>
 
-          <div class="nav-cta">
+          <div class="nav-cta nav-cta-simple">
             <a class="btn btn-ghost" href="courses.html">View Courses</a>
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
           </div>
@@ -108,7 +97,7 @@
         </div>
       </section>
 
-      <!-- ALUMNI PHOTO TESTIMONIALS (visible images, compact, under hero) -->
+      <!-- ALUMNI PHOTO TESTIMONIALS (show full images, no cropping) -->
       <section class="section section-tight" id="alumni">
         <div class="container">
           <div class="section-head section-head-tight">
@@ -124,38 +113,46 @@
             </div>
           </div>
 
-          <div class="alumni-strip">
-            <figure class="alumni-tile">
-              <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
-              <figcaption>
-                <span class="alumni-name">Ikay U.</span>
-                <span class="alumni-role">AWS Solution Architect</span>
-              </figcaption>
-            </figure>
+          <div class="alumni-grid">
+            <article class="alumni-card">
+              <div class="alumni-media">
+                <img src="assets/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
+              </div>
+              <div class="alumni-meta">
+                <div class="alumni-name">Ikay U.</div>
+                <div class="alumni-role">AWS Solution Architect</div>
+              </div>
+            </article>
 
-            <figure class="alumni-tile">
-              <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
-              <figcaption>
-                <span class="alumni-name">Adelia Manuel</span>
-                <span class="alumni-role">Cloud Engineer</span>
-              </figcaption>
-            </figure>
+            <article class="alumni-card">
+              <div class="alumni-media">
+                <img src="assets/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
+              </div>
+              <div class="alumni-meta">
+                <div class="alumni-name">Adelia Manuel</div>
+                <div class="alumni-role">Cloud Engineer</div>
+              </div>
+            </article>
 
-            <figure class="alumni-tile">
-              <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
-              <figcaption>
-                <span class="alumni-name">Thelma N.</span>
-                <span class="alumni-role">Cloud Security Specialist</span>
-              </figcaption>
-            </figure>
+            <article class="alumni-card">
+              <div class="alumni-media">
+                <img src="assets/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
+              </div>
+              <div class="alumni-meta">
+                <div class="alumni-name">Thelma N.</div>
+                <div class="alumni-role">Cloud Security Specialist</div>
+              </div>
+            </article>
 
-            <figure class="alumni-tile">
-              <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
-              <figcaption>
-                <span class="alumni-name">Gideon Aiyegunle</span>
-                <span class="alumni-role">Alumni</span>
-              </figcaption>
-            </figure>
+            <article class="alumni-card">
+              <div class="alumni-media">
+                <img src="assets/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
+              </div>
+              <div class="alumni-meta">
+                <div class="alumni-name">Gideon Aiyegunle</div>
+                <div class="alumni-role">Alumni</div>
+              </div>
+            </article>
           </div>
 
           <div class="alumni-strip-actions">
@@ -165,7 +162,7 @@
         </div>
       </section>
 
-      <!-- COURSE PATHS (re-ordered + updated titles) -->
+      <!-- COURSE PATHS (order preserved) -->
       <section class="section" id="tracks">
         <div class="container">
           <div class="section-head">
@@ -231,7 +228,7 @@
         </div>
       </section>
 
-      <!-- PREMIUM BANNER SECTION (reduced height/padding, sharper image, same functionality) -->
+      <!-- PREMIUM BANNER SECTION (unchanged; your hotspot keeps working) -->
       <section class="section section-banner-tight">
         <div class="container">
           <div class="banner banner--tight">
@@ -321,7 +318,7 @@
       </section>
     </main>
 
-    <!-- Footer (unchanged structure) -->
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -335,7 +332,7 @@
         <div>
           <div class="footer-title">Prospective Students</div>
           <ul class="footer-links">
-            <li><a href="courses.html">Course Info</a></li>
+            <li><a href="courses.html">Courses</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
             <li><a href="about.html">About</a></li>
           </ul>
@@ -344,7 +341,7 @@
         <div>
           <div class="footer-title">Support</div>
           <ul class="footer-links">
-            <li><a href="contact.html">Book Consultation</a></li>
+            <li><a href="contact.html">Contact</a></li>
             <li><a href="corporate.html">Corporate / Consulting</a></li>
           </ul>
         </div>
