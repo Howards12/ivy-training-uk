@@ -702,4 +702,141 @@ display: block;
   font-size: 22px;
   margin: 0 0 6px;
 }
+/* ================================
+   Header: keep tagline on ONE line
+   ================================ */
+.brand-tag--nowrap {
+  white-space: nowrap;
+}
+
+/* If your header is tight on smaller screens, this prevents awkward wrapping */
+@media (max-width: 520px) {
+  .brand-tag--nowrap {
+    font-size: 12px;
+    opacity: 0.82;
+  }
+}
+
+/* ================================
+   Top Google Ad banner (functional CTA)
+   ================================ */
+.top-ad {
+  padding: 14px 0 6px;
+}
+
+.top-ad-card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+.top-ad-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* keep it crisp */
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+
+/* Visible "Enroll Now" text that is clickable */
+.top-ad-cta {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+
+  background: rgba(11, 29, 20, 0.72);
+  border: 1px solid rgba(199, 173, 115, 0.45);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.top-ad-cta:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(199, 173, 115, 0.65);
+}
+
+.top-ad-cta:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+/* ================================
+   Alumni: show FULL images (no cropping)
+   ================================ */
+.alumni-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 980px) {
+  .alumni-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .alumni-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alumni-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}
+
+.alumni-media {
+  background: rgba(0, 0, 0, 0.18);
+  padding: 10px;
+}
+
+.alumni-media img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* KEY: no cropping */
+  object-position: center;
+  display: block;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 560px) {
+  .alumni-media img {
+    height: 240px;
+  }
+}
+
+.alumni-meta {
+  padding: 12px 14px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.alumni-name {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.alumni-role {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
 
