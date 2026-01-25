@@ -7,7 +7,7 @@
     <title>Testimonials | Ivy Training & Consulting UK</title>
     <meta
       name="description"
-      content="Watch Ivy Training & Consulting UK alumni stories, browse class-in-session highlights, and read student testimonials from Cloud, DevOps, and AI cohorts."
+      content="Watch Ivy Training & Consulting UK alumni stories, browse class-in-session highlights, and read student testimonials from Cloud, DevOps, Data Science, and AI cohorts."
     />
 
     <!-- OpenGraph -->
@@ -30,7 +30,7 @@
     <!-- Skip link -->
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (same as index.html) -->
+    <!-- Header (same structure as your index.html) -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
@@ -75,17 +75,15 @@
     </header>
 
     <main id="main">
-      <!-- Page intro (minimal so it doesn't change your site look) -->
+      <!-- Intro -->
       <section class="section section-tight">
         <div class="container">
           <div class="section-head section-head-tight">
             <div>
-              <h1 style="margin: 0 0 8px; font-size: 34px; letter-spacing: -0.02em">
-                Testimonials
-              </h1>
-              <p class="muted" style="margin: 0; max-width: 80ch">
-                Watch short alumni stories, browse “class in session” highlights, and read what students are saying
-                about our Cloud, DevOps, and AI cohorts.
+              <h1 class="t-page-title">Testimonials</h1>
+              <p class="muted t-page-sub">
+                Real feedback from our cohorts. Watch alumni stories, see “class in session” highlights, and explore
+                student testimonials.
               </p>
             </div>
 
@@ -97,62 +95,87 @@
         </div>
       </section>
 
-      <!-- Alumni videos -->
+      <!-- Alumni videos (NO black pillars: use thumbnail cards instead of embeds) -->
       <section class="section" id="alumni-videos">
         <div class="container">
           <div class="section-head">
             <div>
-              <h2>Alumni Stories</h2>
-              <p class="muted">Short videos from alumni sharing their experience, progress, and outcomes.</p>
+              <h2>Alumni Stories (Video)</h2>
+              <p class="muted">
+                Click to watch (opens YouTube). This layout avoids the black side pillars that appear on embedded Shorts.
+              </p>
             </div>
           </div>
 
-          <!-- Uses simple “cards” so it fits your current CSS -->
-          <div class="cards">
-            <article class="card">
-              <div class="embed-16x9">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/5sa1jjuHkBc"
-                  title="Alumni story 2 - Ivy Training & Consulting UK"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+          <div class="t-video-grid">
+            <!-- Video 1 -->
+            <a
+              class="t-video-card"
+              href="https://youtube.com/shorts/LT2BiNrW-SM?feature=share"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch Alumni Story #1 on YouTube"
+              title="Watch Alumni Story #1"
+            >
+              <div class="t-video-thumb">
+                <img
+                  src="https://img.youtube.com/vi/LT2BiNrW-SM/hqdefault.jpg"
+                  alt="Thumbnail for Alumni Story #1"
+                  loading="lazy"
+                />
+                <span class="t-play" aria-hidden="true">▶</span>
               </div>
-              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
-                Alumni Story #1
-              </p>
-            </article>
+              <div class="t-video-meta">
+                <div class="t-video-title">Alumni Story #1</div>
+                <div class="muted">Top alumni story (your best → least best order)</div>
+              </div>
+            </a>
 
-            <article class="card">
-              <div class="embed-16x9">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/9a-QZwm6Gqc"
-                  title="Alumni story 3 - Ivy Training & Consulting UK"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+            <!-- Video 2 -->
+            <a
+              class="t-video-card"
+              href="https://youtube.com/shorts/5sa1jjuHkBc?feature=share"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch Alumni Story #2 on YouTube"
+              title="Watch Alumni Story #2"
+            >
+              <div class="t-video-thumb">
+                <img
+                  src="https://img.youtube.com/vi/5sa1jjuHkBc/hqdefault.jpg"
+                  alt="Thumbnail for Alumni Story #2"
+                  loading="lazy"
+                />
+                <span class="t-play" aria-hidden="true">▶</span>
               </div>
-              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
-                Alumni Story #2
-              </p>
-            </article>
+              <div class="t-video-meta">
+                <div class="t-video-title">Alumni Story #2</div>
+                <div class="muted">Learning experience, support, and outcomes</div>
+              </div>
+            </a>
 
-            <article class="card">
-              <div class="embed-16x9">
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/LT2BiNrW-SM"
-                  title="Alumni story 1 - Ivy Training & Consulting UK"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
+            <!-- Video 3 -->
+            <a
+              class="t-video-card"
+              href="https://youtube.com/shorts/9a-QZwm6Gqc?feature=share"
+              target="_blank"
+              rel="noopener"
+              aria-label="Watch Alumni Story #3 on YouTube"
+              title="Watch Alumni Story #3"
+            >
+              <div class="t-video-thumb">
+                <img
+                  src="https://img.youtube.com/vi/9a-QZwm6Gqc/hqdefault.jpg"
+                  alt="Thumbnail for Alumni Story #3"
+                  loading="lazy"
+                />
+                <span class="t-play" aria-hidden="true">▶</span>
               </div>
-              <p class="muted" style="margin-top: 10px; margin-bottom: 0">
-                Alumni Story #3
-              </p>
-            </article>
+              <div class="t-video-meta">
+                <div class="t-video-title">Alumni Story #3</div>
+                <div class="muted">Confidence boost + next steps after training</div>
+              </div>
+            </a>
           </div>
 
           <div class="inline-actions" style="margin-top: 16px">
@@ -162,81 +185,77 @@
         </div>
       </section>
 
-      <!-- Photo testimonials (same assets you generated) -->
-      <section class="section" id="photo-testimonials">
+      <!-- Alumni photo testimonials (make sure images are visible) -->
+      <section class="section" id="alumni-photos">
         <div class="container">
           <div class="section-head">
             <div>
               <h2>Featured Alumni</h2>
-              <p class="muted">A few highlight testimonials from graduates.</p>
+              <p class="muted">Photo testimonials (legible, premium, and consistent with your site theme).</p>
             </div>
           </div>
 
-          <div class="alumni-feature-grid">
-            <figure class="alumni-feature">
-              <img src="assets/alumni-1.jpg" alt="Ikay U. testimonial" loading="lazy" />
+          <div class="t-alumni-grid">
+            <figure class="t-alumni-item">
+              <img src="assets/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
             </figure>
-
-            <figure class="alumni-feature">
-              <img src="assets/alumni-2.jpg" alt="Adelia Manuel testimonial" loading="lazy" />
+            <figure class="t-alumni-item">
+              <img src="assets/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel." loading="lazy" />
             </figure>
-
-            <figure class="alumni-feature">
-              <img src="assets/alumni-3.jpg" alt="Thelma N. testimonial" loading="lazy" />
+            <figure class="t-alumni-item">
+              <img src="assets/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
             </figure>
-
-            <figure class="alumni-feature">
-              <img src="assets/alumni-4.jpg" alt="Gideon Aiyegunle testimonial" loading="lazy" />
+            <figure class="t-alumni-item">
+              <img src="assets/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle." loading="lazy" />
             </figure>
           </div>
         </div>
       </section>
 
-      <!-- Class in session gallery -->
+      <!-- Class in Session gallery -->
       <section class="section" id="class-in-session">
         <div class="container">
           <div class="section-head">
             <div>
               <h2>Class in Session</h2>
-              <p class="muted">Snapshots from live sessions and cohort learning (Zoom screenshots).</p>
+              <p class="muted">Zoom screenshots from live sessions (add your images in assets/class/).</p>
             </div>
           </div>
 
-          <!-- NOTE: replace filenames with your real ones if different -->
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img src="assets/class/zoom-1.jpg" alt="Zoom training session with multiple students" loading="lazy" />
+          <div class="t-gallery-grid">
+            <figure class="t-gallery-item">
+              <img src="assets/class/zoom-1.jpg" alt="Zoom class session with multiple students" loading="lazy" />
             </figure>
-            <figure class="gallery-item">
+            <figure class="t-gallery-item">
               <img src="assets/class/zoom-2.jpg" alt="Instructor-led live training session on Zoom" loading="lazy" />
             </figure>
-            <figure class="gallery-item">
-              <img src="assets/class/zoom-3.jpg" alt="Cloud engineering cohort Zoom session screenshot" loading="lazy" />
+            <figure class="t-gallery-item">
+              <img src="assets/class/zoom-3.jpg" alt="Cohort learning on Zoom with shared screen" loading="lazy" />
             </figure>
-            <figure class="gallery-item">
-              <img src="assets/class/zoom-4.jpg" alt="DevOps cohort Zoom session screenshot" loading="lazy" />
+            <figure class="t-gallery-item">
+              <img src="assets/class/zoom-4.jpg" alt="Group learning session on Zoom" loading="lazy" />
             </figure>
-            <figure class="gallery-item">
-              <img src="assets/class/zoom-5.jpg" alt="AI training session Zoom screenshot" loading="lazy" />
+            <figure class="t-gallery-item">
+              <img src="assets/class/zoom-5.jpg" alt="Hands-on exercise session on Zoom" loading="lazy" />
             </figure>
-            <figure class="gallery-item">
-              <img src="assets/class/zoom-6.jpg" alt="Group learning session on Zoom" loading="lazy" />
+            <figure class="t-gallery-item">
+              <img src="assets/class/zoom-6.jpg" alt="Cohort Q&A session on Zoom" loading="lazy" />
             </figure>
           </div>
 
           <p class="muted" style="margin-top: 12px">
-            Want to be part of the next cohort? <a class="link" href="contact.html">Enroll now →</a>
+            Want to join the next cohort? <a class="link" href="contact.html">Enroll now →</a>
           </p>
         </div>
       </section>
 
-      <!-- Written testimonials (placeholders you can replace anytime) -->
+      <!-- Written testimonials (safe placeholders you can replace anytime) -->
       <section class="section" id="written">
         <div class="container">
           <div class="section-head">
             <div>
               <h2>What Students Are Saying</h2>
-              <p class="muted">Written feedback from students across Cloud, DevOps, and AI programs.</p>
+              <p class="muted">Written feedback from students across Cloud, DevOps, Data Science, and AI programs.</p>
             </div>
           </div>
 
@@ -247,7 +266,7 @@
                 accountable.”
               </p>
               <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
-              <p class="muted" style="margin: 6px 0 0">Cloud Computing • 10-week cohort</p>
+              <p class="muted" style="margin: 6px 0 0">Solution Architect • 10-week cohort</p>
             </article>
 
             <article class="card">
@@ -255,7 +274,7 @@
                 “Hands-on labs + support = results. The portfolio guidance and interview prep were the game-changer.”
               </p>
               <p style="margin-bottom: 0; font-weight: 800">Student Name</p>
-              <p class="muted" style="margin: 6px 0 0">DevOps Engineering • 12-week cohort</p>
+              <p class="muted" style="margin: 6px 0 0">DevOps Engineer • 12-week cohort</p>
             </article>
 
             <article class="card">
@@ -275,7 +294,7 @@
       </section>
     </main>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer (same as your index.html) -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -334,56 +353,118 @@
       document.getElementById("year").textContent = String(new Date().getFullYear());
     </script>
 
-    <!-- Small page-only styles to support gallery + embeds WITHOUT changing your global UI -->
+    <!-- Page-local styles ONLY (does not change your global theme/colors) -->
     <style>
-      .embed-16x9 {
+      .t-page-title {
+        margin: 0 0 8px;
+        font-size: 34px;
+        letter-spacing: -0.02em;
+      }
+
+      .t-page-sub {
+        margin: 0;
+        max-width: 80ch;
+      }
+
+      /* Video cards (thumbnail approach = no black side pillars) */
+      .t-video-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .t-video-card {
+        display: block;
+        border-radius: 18px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+      }
+
+      .t-video-card:focus-visible {
+        outline: 2px solid rgba(199, 173, 115, 0.45);
+        outline-offset: 3px;
+      }
+
+      .t-video-thumb {
         position: relative;
         width: 100%;
-        padding-top: 56.25%;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 56.25%; /* 16:9 */
         background: rgba(0, 0, 0, 0.25);
       }
-      .embed-16x9 iframe {
+
+      .t-video-thumb img {
         position: absolute;
         inset: 0;
         width: 100%;
         height: 100%;
-        border: 0;
+        object-fit: cover;
       }
 
-      .alumni-feature-grid {
+      .t-play {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-size: 16px;
+        background: rgba(6, 18, 12, 0.75);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .t-video-meta {
+        padding: 12px 12px 14px;
+      }
+
+      .t-video-title {
+        font-weight: 900;
+        letter-spacing: 0.2px;
+        margin-bottom: 4px;
+      }
+
+      /* Alumni images */
+      .t-alumni-grid {
         display: grid;
         gap: 14px;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       }
-      .alumni-feature {
+
+      .t-alumni-item {
         margin: 0;
         border-radius: 18px;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.1);
         background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
       }
-      .alumni-feature img {
+
+      .t-alumni-item img {
         width: 100%;
         height: auto;
         display: block;
       }
 
-      .gallery-grid {
+      /* Class gallery */
+      .t-gallery-grid {
         display: grid;
         gap: 12px;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }
-      .gallery-item {
+
+      .t-gallery-item {
         margin: 0;
         border-radius: 18px;
         overflow: hidden;
         border: 1px solid rgba(255, 255, 255, 0.1);
         background: rgba(255, 255, 255, 0.05);
       }
-      .gallery-item img {
+
+      .t-gallery-item img {
         width: 100%;
         height: 190px;
         object-fit: cover;
