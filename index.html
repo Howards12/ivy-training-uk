@@ -29,13 +29,14 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (streamlined + only working tabs) -->
+    <!-- Header -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
+            <!-- single line (Cloud • DevOps • Data Science • AI) -->
             <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
@@ -44,6 +45,7 @@
           <span></span><span></span><span></span>
         </button>
 
+        <!-- Streamlined nav (only relevant working tabs) -->
         <nav class="nav" aria-label="Primary navigation">
           <div class="nav-links">
             <a href="courses.html">Courses</a>
@@ -69,39 +71,34 @@
           <div class="hero-copy">
             <p class="eyebrow">Instructor-led UK training • Practical projects • Career support</p>
             <h1>Cloud, DevOps &amp; AI training that gets you building.</h1>
+
             <p class="lead">
-              Join a structured cohort, learn by doing, and graduate with real-world project experience
-              across Cloud Computing, DevOps Engineering, and AI for Engineers.
+              Join a structured cohort, learn by doing, and graduate with real-world project experience across Cloud
+              Computing, DevOps Engineering, and AI for Engineers.
             </p>
 
+            <!-- KEEP ONLY ENROLL NOW (remove the other button + chips) -->
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-              <a class="btn btn-ghost" href="courses.html">Explore Course Info</a>
             </div>
 
-            <div class="hero-badges" aria-label="Key program highlights">
-              <div class="badge">8–12 week programs</div>
-              <div class="badge">Live sessions + support</div>
-              <div class="badge">Hands-on projects</div>
-              <div class="badge">Recruitment assistance</div>
-            </div>
+            <!-- optional: a non-button link (not a chip/button) -->
+            <p class="hero-subtle-link">
+              Want details first? <a class="text-link" href="courses.html">Explore course info</a>
+            </p>
           </div>
 
-          <!-- Your Google Ad / Banner inside hero (clickable hotspot over "Enroll Now") -->
-          <div class="hero-card hero-card--ad" role="img" aria-label="Ivy Training banner">
+          <div class="hero-card" role="img" aria-label="Ivy Training preview image">
             <img
               src="assets/hero.jpg"
               alt="Ivy Training & Consulting UK banner showing Cloud, DevOps, Data Science, and AI training"
               loading="eager"
             />
-
-            <!-- Hotspot: click the banner's Enroll Now -->
-            <a class="hero-ad-hotspot" href="contact.html" aria-label="Enroll Now" title="Enroll Now"></a>
           </div>
         </div>
       </section>
 
-      <!-- ALUMNI HIGHLIGHTS (full images visible + hover zoom OUT) -->
+      <!-- ALUMNI HIGHLIGHTS -->
       <section class="section section-tight" id="alumni">
         <div class="container">
           <div class="section-head section-head-tight">
@@ -117,49 +114,41 @@
             </div>
           </div>
 
-          <div class="alumni-grid">
-            <article class="alumni-card" tabindex="0">
-              <div class="alumni-media">
-                <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
-              </div>
-              <div class="alumni-meta">
-                <div class="alumni-name">Ikay U.</div>
-                <div class="alumni-role">AWS Solution Architect</div>
-              </div>
-            </article>
+          <div class="alumni-strip" aria-label="Alumni highlights">
+            <figure class="alumni-tile">
+              <img src="assets/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Ikay U.</span>
+                <span class="alumni-role">AWS Solution Architect</span>
+              </figcaption>
+            </figure>
 
-            <article class="alumni-card" tabindex="0">
-              <div class="alumni-media">
-                <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
-              </div>
-              <div class="alumni-meta">
-                <div class="alumni-name">Adelia Manuel</div>
-                <div class="alumni-role">Cloud Engineer</div>
-              </div>
-            </article>
+            <figure class="alumni-tile">
+              <img src="assets/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Adelia Manuel</span>
+                <span class="alumni-role">Cloud Engineer</span>
+              </figcaption>
+            </figure>
 
-            <article class="alumni-card" tabindex="0">
-              <div class="alumni-media">
-                <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
-              </div>
-              <div class="alumni-meta">
-                <div class="alumni-name">Thelma N.</div>
-                <div class="alumni-role">Cloud Security Specialist</div>
-              </div>
-            </article>
+            <figure class="alumni-tile">
+              <img src="assets/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Thelma N.</span>
+                <span class="alumni-role">Cloud Security Specialist</span>
+              </figcaption>
+            </figure>
 
-            <article class="alumni-card" tabindex="0">
-              <div class="alumni-media">
-                <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon A." loading="lazy" />
-              </div>
-              <div class="alumni-meta">
-                <div class="alumni-name">Gideon A.</div>
-                <div class="alumni-role">AWS Solution Architect</div>
-              </div>
-            </article>
+            <figure class="alumni-tile">
+              <img src="assets/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Gideon Aiyegunle</span>
+                <span class="alumni-role">Alumni</span>
+              </figcaption>
+            </figure>
           </div>
 
-          <div class="alumni-actions">
+          <div class="alumni-strip-actions">
             <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
             <a class="btn btn-ghost btn-sm" href="testimonials.html">See all testimonials</a>
           </div>
@@ -225,7 +214,7 @@
               <h3>AI for Engineers</h3>
               <p class="muted">Engineering-focused AI projects and delivery patterns for real teams.</p>
               <div class="card-actions">
-                <a class="link" href="ai-for-engineers.html">View syllabus →</a>
+                <a class="link" href="courses.html#ai-for-engineers">View details →</a>
               </div>
             </article>
           </div>
@@ -271,7 +260,7 @@
           </div>
           <div class="cta-actions">
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost" href="courses.html">View Course Info</a>
+            <a class="btn btn-ghost" href="courses.html">View Courses</a>
           </div>
         </div>
       </section>
@@ -300,8 +289,7 @@
         <div>
           <div class="footer-title">Support</div>
           <ul class="footer-links">
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="corporate.html">Corporate / Consulting</a></li>
+            <li><a href="contact.html">Enroll / Book Consultation</a></li>
           </ul>
         </div>
 
@@ -311,7 +299,6 @@
             <li><a href="student-handbook.html">Student Handbook</a></li>
             <li><a href="gdpr.html">GDPR</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
           </ul>
         </div>
       </div>
@@ -322,7 +309,6 @@
     </footer>
 
     <script>
-      // Mobile nav toggle
       const toggle = document.querySelector(".nav-toggle");
       const nav = document.querySelector(".nav");
       if (toggle && nav) {
@@ -331,10 +317,7 @@
           toggle.setAttribute("aria-expanded", String(isOpen));
         });
       }
-
-      // Footer year
-      const year = document.getElementById("year");
-      if (year) year.textContent = String(new Date().getFullYear());
+      document.getElementById("year").textContent = String(new Date().getFullYear());
     </script>
   </body>
 </html>
