@@ -436,3 +436,63 @@ img { max-width: 100%; display: block; }
     width: 760px;
   }
 }
+/* ===========================
+   Google Ad Banner - Clickable hotspot
+   =========================== */
+
+.promo-banner {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+}
+
+.promo-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hotspot over the banner's Enroll Now button */
+.promo-banner-hotspot {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  pointer-events: auto;
+  cursor: pointer;
+
+  /* Adjust if needed */
+  left: 67%;
+  top: 72%;
+  width: min(260px, 38vw);
+  height: 64px;
+  transform: translate(-50%, -50%);
+  background: transparent;
+}
+
+.promo-banner-hotspot:focus-visible {
+  outline: 2px solid rgba(199, 173, 115, 0.65);
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+
+@media (max-width: 900px) {
+  .promo-banner-hotspot {
+    left: 66%;
+    top: 74%;
+    height: 58px;
+    width: min(240px, 52vw);
+  }
+}
+
+@media (max-width: 560px) {
+  .promo-banner-hotspot {
+    left: 64%;
+    top: 76%;
+    height: 54px;
+    width: min(220px, 72vw);
+  }
+}
+
