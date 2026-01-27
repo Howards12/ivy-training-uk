@@ -495,4 +495,51 @@ img { max-width: 100%; display: block; }
     width: min(220px, 72vw);
   }
 }
+/* ===============================
+   Google Ad Banner – Clickable Enroll Button
+   =============================== */
+
+.google-ad {
+  position: relative;
+}
+
+/* Make sure image does NOT block clicks */
+.google-ad img {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Invisible clickable hotspot over the Enroll Now button */
+.google-ad-enroll {
+  position: absolute;
+  top: 62%;        /* adjust slightly if needed */
+  left: 70%;       /* adjust slightly if needed */
+  width: 220px;    /* button width */
+  height: 60px;    /* button height */
+
+  z-index: 3;
+  cursor: pointer;
+
+  /* invisible */
+  background: transparent;
+  border-radius: 14px;
+}
+
+/* Accessibility focus */
+.google-ad-enroll:focus-visible {
+  outline: 2px solid rgba(199, 173, 115, 0.6);
+  outline-offset: 4px;
+}
+
+/* Mobile tuning */
+@media (max-width: 900px) {
+  .google-ad-enroll {
+    top: 68%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 56px;
+  }
+}
 
