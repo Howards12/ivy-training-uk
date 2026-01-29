@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Testimonials | Ivy Training & Consulting UK</title>
+    <title>Testimonials | Ivy Training &amp; Consulting UK</title>
     <meta
       name="description"
       content="Hear from Ivy Training & Consulting UK alumni. Watch student stories and see highlights from live sessions."
@@ -19,15 +19,26 @@
     <meta property="og:image" content="assets/hero.jpg" />
 
     <meta name="theme-color" content="#0b1510" />
-
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Testimonials-page-only (keeps Zoom image reasonably sized even if CSS changes later) -->
+    <style>
+      #class-session .class-session-card {
+        width: min(760px, 92vw);
+      }
+      @media (min-width: 1200px) {
+        #class-session .class-session-card {
+          width: 720px;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (match homepage header) -->
+    <!-- Header (streamlined nav) -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
@@ -43,22 +54,11 @@
         </button>
 
         <nav class="nav" aria-label="Primary navigation">
-          <div class="nav-groups">
-            <div class="nav-group">
-              <span class="nav-group-label">Prospective Students</span>
-              <div class="nav-links">
-                <a href="courses.html">Course Info</a>
-                <a href="testimonials.html" aria-current="page">Testimonials</a>
-                <a href="about.html">About</a>
-              </div>
-            </div>
-
-            <div class="nav-group">
-              <span class="nav-group-label">Support</span>
-              <div class="nav-links">
-                <a href="contact.html">Book Consultation</a>
-              </div>
-            </div>
+          <div class="nav-links">
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html" aria-current="page">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="nav-cta">
@@ -70,13 +70,12 @@
     </header>
 
     <main id="main">
-      <!-- Page intro -->
       <section class="section section-tight">
         <div class="container">
           <div class="section-head section-head-tight">
             <div>
               <h1 style="margin: 0 0 10px">Testimonials</h1>
-              <p class="muted" style="max-width: 70ch; margin: 0">
+              <p class="muted" style="max-width: 75ch; margin: 0">
                 Watch quick alumni stories and see a real snapshot from class. If you’re ready, book a consultation and we’ll guide you to the right track.
               </p>
             </div>
@@ -89,7 +88,6 @@
         </div>
       </section>
 
-      <!-- Alumni Videos (keep as-is; your videos are fine) -->
       <section class="section" id="videos">
         <div class="container">
           <div class="section-head">
@@ -97,9 +95,8 @@
             <p class="muted">Real experiences from learners across our programs.</p>
           </div>
 
-          <!-- Keep your existing classes; size/sharpness is controlled in CSS -->
+          <!-- NOTE: these rely on your existing .video-grid/.video-card/.video-frame styles in styles.css -->
           <div class="video-grid">
-            <!-- Your order (best to least best) -->
             <article class="video-card">
               <div class="video-frame">
                 <iframe
@@ -124,7 +121,6 @@
               </div>
             </article>
 
-            <!-- First video moved to last (per your request earlier) -->
             <article class="video-card">
               <div class="video-frame">
                 <iframe
@@ -145,32 +141,28 @@
         </div>
       </section>
 
-      <!-- Class in Session (compact) -->
-<section class="section" id="class-session">
-  <div class="container">
-    <div class="section-head">
-      <h2>Class in Session</h2>
-      <p class="muted">
-        A real snapshot from one of our live sessions.
-      </p>
-    </div>
+      <section class="section" id="class-session">
+        <div class="container">
+          <div class="section-head">
+            <h2>Class in Session</h2>
+            <p class="muted">A real snapshot from one of our live sessions.</p>
+          </div>
 
-    <div class="class-session-wrap">
-      <figure class="class-session-card">
-        <img
-          src="assets/class/zoom-1-blurred.jpg"
-          alt="Ivy Training & Consulting UK live Zoom class session"
-          loading="lazy"
-        />
-        <figcaption class="class-session-caption">
-          Live cohort session — interactive learning, support, and progress tracking.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
+          <div class="class-session-wrap">
+            <figure class="class-session-card">
+              <img
+                src="assets/class/zoom-1-blurred.jpg"
+                alt="Ivy Training & Consulting UK live Zoom class session"
+                loading="lazy"
+              />
+              <figcaption class="class-session-caption">
+                Live cohort session — interactive learning, support, and progress tracking.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
 
-      <!-- CTA -->
       <section class="section section-cta">
         <div class="container cta-box">
           <div>
@@ -185,14 +177,11 @@
       </section>
     </main>
 
-    <!-- Footer (match homepage footer) -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Ivy Training &amp; Consulting UK</div>
-          <p class="muted">
-            Instructor-led training in Cloud, DevOps and AI with practical projects and career support.
-          </p>
+          <p class="muted">Instructor-led training in Cloud, DevOps and AI with practical projects and career support.</p>
           <p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
         </div>
 
