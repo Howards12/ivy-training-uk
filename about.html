@@ -1,138 +1,184 @@
 <!doctype html>
 <html lang="en-GB">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Ivy Training & Consulting UK</title>
-  <meta name="description" content="Learn about Ivy Training & Consulting UK Limited and our mission to deliver hands-on tech training." />
-  
-  <meta property="og:title" content="About | Ivy Training & Consulting UK" />
-  <meta property="og:description" content="Learn about Ivy Training & Consulting UK Limited and our mission to deliver hands-on tech training." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/hero.jpg" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-  <nav class="nav container">
-    <a class="brand" href="index.html">
-      <img src="assets/logo.jpg" alt="Ivy Training &amp; Consulting UK logo" class="brand__logo" />
-      <span class="brand__name">Ivy Training &amp; Consulting UK</span>
-    </a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <button class="nav__toggle" aria-label="Open menu" data-menu-toggle>☰</button>
+    <title>About | Ivy Training &amp; Consulting UK</title>
+    <meta
+      name="description"
+      content="Learn about Ivy Training & Consulting UK — instructor-led training in Cloud, DevOps, Data Science and AI with practical projects and career support."
+    />
 
-    <div class="nav__links" data-menu>
-      <a class="nav__group-label nav__group-link" href="courses.html">Prospective Students</a>
-      <a class="nav__link" href="courses.html">Course Info</a>
-      <a class="nav__link" href="professionals.html">Working Professionals</a>
-      <a class="nav__link is-active" href="about.html">About</a>
+    <meta name="theme-color" content="#0b1510" />
+    <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-      <span class="nav__divider" aria-hidden="true"></span>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <a class="nav__group-label nav__group-link" href="contact.html">Support</a>
-      <a class="nav__link" href="corporate.html">Consulting / Corporate</a>
-      <a class="nav__link nav__cta" href="contact.html">Book Consultation</a>
-    </div>
-  </nav>
-</header>
-  <main>
-  <section class="hero hero--compact">
-    <div class="hero__bg">
-      <img src="assets/hero.jpg" alt="" class="hero__bg-media hero__bg-media--blur" />
-      <div class="hero__overlay"></div>
-    </div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
+          <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
+          <div class="brand-text">
+            <div class="brand-name">Ivy Training &amp; Consulting UK</div>
+            <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
+          </div>
+        </a>
 
-    <div class="container hero__content">
-      <span class="kicker">About</span>
-      <h1>Ivy Training &amp; Consulting UK</h1>
-      <p>We help learners and teams build practical skills in cloud, DevOps, architecture, data science, and AI.</p>
-      <div class="hero__buttons">
-        <a class="btn btn--primary" href="contact.html">Enroll Now</a>
-        <a class="btn btn--ghost" href="courses.html">Browse courses</a>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav" aria-label="Primary navigation">
+          <div class="nav-links">
+            <a href="courses.html">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="nav-cta">
+            <a class="btn btn-ghost" href="courses.html">View Courses</a>
+            <a class="btn btn-primary" href="contact.html">Enroll Now</a>
+          </div>
+        </nav>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <section class="section">
-    <div class="container">
-      <div class="grid grid--two" style="align-items:start;">
-        <div class="panel">
-          <h2 style="margin-top:0;">Our mission</h2>
-          <p class="muted" style="line-height:1.8;">
-            To deliver hands-on training that makes people confident in real environments—not just exams.
-            We teach with clarity, focus on practical outcomes, and support learners as they grow.
-          </p>
-          <div style="margin-top:14px;">
-            <span class="badge">Practical</span>
-            <span class="badge">Supportive</span>
-            <span class="badge">Career-focused</span>
+    <main id="main">
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-head section-head-tight">
+            <div>
+              <h1 style="margin: 0 0 10px">About Ivy Training</h1>
+              <p class="muted" style="max-width: 85ch; margin: 0">
+                Ivy Training &amp; Consulting UK delivers structured, instructor-led training designed to help learners
+                build real skills — and prove them through practical projects.
+              </p>
+            </div>
+
+            <div class="section-actions">
+              <a class="btn btn-primary btn-sm" href="contact.html">Book Consultation</a>
+              <a class="btn btn-ghost btn-sm" href="courses.html">View Courses</a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="panel">
-          <h2 style="margin-top:0;">What we teach</h2>
-          <ul class="list">
-            <li>Cloud engineering (AWS/Azure fundamentals + deployments)</li>
-            <li>DevOps (CI/CD, IaC, containers, monitoring)</li>
-            <li>Solution architecture (secure, scalable, cost-aware design)</li>
-            <li>Data science (Python analytics, ML foundations)</li>
-            <li>AI (applied AI workflows + responsible AI)</li>
+      <section class="section">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>Our approach</h2>
+              <p class="muted">
+                We focus on practical learning: clear instruction, guided implementation, and feedback that helps you
+                improve quickly.
+              </p>
+              <ul class="list">
+                <li>Structured cohorts and guided weekly milestones</li>
+                <li>Hands-on projects that mirror real delivery</li>
+                <li>Support with CV/LinkedIn and interview preparation</li>
+                <li>Clarity and accountability (so you keep progressing)</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Who it’s for</h3>
+              <p class="muted">
+                Career switchers, working professionals, and learners who want structure and a clear path from learning
+                to outcomes.
+              </p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="accreditation">
+        <div class="container">
+          <div class="section-head">
+            <h2>Accreditation</h2>
+            <p class="muted">Placeholder section — update when formal accreditation details are ready.</p>
+          </div>
+
+          <div class="panel">
+            <p class="muted" style="margin: 0">
+              Accreditation details will be published here. For now, our focus is delivering high-quality instruction,
+              practical projects, and strong learner support.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cta">
+        <div class="container cta-box">
+          <div>
+            <h2>Want a personalised recommendation?</h2>
+            <p class="muted">Tell us your goal and timeline — we’ll guide you to the best track.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="contact.html">Book Consultation</a>
+            <a class="btn btn-ghost" href="testimonials.html">See Testimonials</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">Ivy Training &amp; Consulting UK</div>
+          <p class="muted">Instructor-led training in Cloud, DevOps and AI with practical projects and career support.</p>
+          <p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
+        </div>
+
+        <div>
+          <div class="footer-title">Prospective Students</div>
+          <ul class="footer-links">
+            <li><a href="courses.html">Course Info</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Support</div>
+          <ul class="footer-links">
+            <li><a href="contact.html">Book Consultation</a></li>
+            <li><a href="corporate.html">Corporate / Consulting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-title">Trust &amp; Compliance</div>
+          <ul class="footer-links">
+            <li><a href="student-handbook.html">Student Handbook</a></li>
+            <li><a href="gdpr.html">GDPR</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section section--alt">
-    <div class="container">
-      <h2>Values</h2>
-      <div class="grid grid--cards" style="margin-top:16px;">
-        <article class="card">
-          <h3>Clarity over complexity</h3>
-          <p>We break topics down into real patterns you can reuse—no fluff.</p>
-        </article>
-        <article class="card">
-          <h3>Hands-on by default</h3>
-          <p>If you don’t build it, you don’t learn it. Labs and projects are central.</p>
-        </article>
-        <article class="card">
-          <h3>Growth mindset</h3>
-          <p>We meet learners where they are and help them move forward—step by step.</p>
-        </article>
+      <div class="container footer-bottom">
+        <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK. All rights reserved.</span>
       </div>
-    </div>
-  </section>
-</main>
-  <footer class="footer">
-  <div class="container footer__grid">
-    <div>
-      <strong>Ivy Training &amp; Consulting UK Limited</strong>
-      <p class="muted">Cloud • DevOps • Solution Architecture • Data Science • AI</p>
-      <p class="muted">Email: ivytrainingcouk@gmail.com</p>
-    </div>
+    </footer>
 
-    <div>
-      <strong>Students</strong>
-      <a href="courses.html">Course Info</a>
-      <a href="student-handbook.html">Student Handbook</a>
-      <a href="contact.html">Book Consultation</a>
-    </div>
-
-    <div>
-      <strong>Trust &amp; Compliance</strong>
-      <a href="privacy.html">Privacy Policy (GDPR)</a>
-      <a href="gdpr.html">GDPR Statement</a>
-      <p class="muted" style="margin-top:10px;">
-        Accreditation: <em>Placeholder</em> — add your awarding body or partner accreditation statement here.
-      </p>
-    </div>
-  </div>
-
-  <div class="footer__bottom container">
-    <span class="muted">© <span id="year"></span> Ivy Training &amp; Consulting UK</span>
-  </div>
-</footer>
-  <script src="js/main.js"></script>
-</body>
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".nav");
+      if (toggle && nav) {
+        toggle.addEventListener("click", () => {
+          const isOpen = nav.classList.toggle("nav-open");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+      }
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
 </html>
+
