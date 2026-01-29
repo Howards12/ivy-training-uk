@@ -21,7 +21,6 @@
     <meta property="og:image" content="assets/hero.jpg" />
 
     <meta name="theme-color" content="#0b1510" />
-
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
@@ -36,7 +35,6 @@
           <img src="assets/logo.jpg" alt="Ivy Training & Consulting UK logo" class="brand-logo" />
           <div class="brand-text">
             <div class="brand-name">Ivy Training &amp; Consulting UK</div>
-            <!-- single line (Cloud • DevOps • Data Science • AI) -->
             <div class="brand-tag">Cloud • DevOps • Data Science • AI</div>
           </div>
         </a>
@@ -45,7 +43,6 @@
           <span></span><span></span><span></span>
         </button>
 
-        <!-- Streamlined nav (only relevant working tabs) -->
         <nav class="nav" aria-label="Primary navigation">
           <div class="nav-links">
             <a href="courses.html">Courses</a>
@@ -77,106 +74,95 @@
               Computing, DevOps Engineering, and AI for Engineers.
             </p>
 
-            <!-- KEEP ONLY ENROLL NOW (remove the other button + chips) -->
+            <!-- KEEP ONLY ENROLL NOW -->
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Enroll Now</a>
             </div>
 
-            <!-- optional: a non-button link (not a chip/button) -->
             <p class="hero-subtle-link">
               Want details first? <a class="text-link" href="courses.html">Explore course info</a>
             </p>
           </div>
 
-          <div class="hero-card" role="img" aria-label="Ivy Training preview image">
+          <!-- ✅ ONLY ONE Google Ad banner (hero-right card) -->
+          <div class="hero-card hero-ad" aria-label="Ivy Training promotional banner">
             <img
-              src="assets/hero.jpg"
-              alt="Ivy Training & Consulting UK banner showing Cloud, DevOps, Data Science, and AI training"
+              src="assets/Google ad.jpg"
+              alt="Ivy Training & Consulting UK promotional banner"
               loading="eager"
             />
+
+            <!-- Click hotspot over the 'Enroll Now' in the image -->
+            <a
+              href="contact.html"
+              class="hero-ad-enroll"
+              aria-label="Enroll Now"
+              title="Enroll Now"
+            ></a>
           </div>
         </div>
       </section>
-<!-- GOOGLE AD BANNER (Enroll Now inside image is clickable) -->
-<section class="section section-banner-top" id="promo-banner">
-  <div class="container">
-    <div class="hero-card google-ad">
-  <img
-    src="assets/Google ad.jpg"
-    alt="Ivy Training promotional banner"
-    loading="eager"
-  />
 
-  <!-- CLICKABLE HOTSPOT over Enroll Now -->
-  <a
-    href="contact.html"
-    class="google-ad-enroll"
-    aria-label="Enroll Now"
-    title="Enroll Now"
-  ></a>
-</div>
-  </div>
-</section>
+      <!-- ALUMNI HIGHLIGHTS (2x bigger + rotating every 6 seconds with cascade) -->
+      <section class="section section-tight" id="alumni">
+        <div class="container">
+          <div class="section-head section-head-tight">
+            <div>
+              <h2 class="h2-sm">Alumni Highlights</h2>
+              <p class="muted">
+                Quick snapshots from graduates. Full video stories live on our Testimonials page.
+              </p>
+            </div>
 
-     <!-- ALUMNI PHOTO TESTIMONIALS (visible images, compact, under hero) -->
-<section class="section section-tight" id="alumni">
-  <div class="container">
-    <div class="section-head section-head-tight">
-      <div>
-        <h2 class="h2-sm">Alumni Highlights</h2>
-        <p class="muted">
-          Quick snapshots from graduates. Full video stories live on our Testimonials page.
-        </p>
-      </div>
+            <div class="section-actions">
+              <a class="btn btn-ghost btn-sm" href="testimonials.html">Watch Alumni Stories</a>
+            </div>
+          </div>
 
-      <div class="section-actions">
-        <a class="btn btn-ghost btn-sm" href="testimonials.html">Watch Alumni Stories</a>
-      </div>
-    </div>
+          <div class="alumni-strip alumni-strip--xl" data-rotate="alumni">
+            <!-- Note: paths match your repo screenshot: assets/alumni/alumni-1.jpg etc -->
 
-    <div class="alumni-strip">
-      <figure class="alumni-tile">
-        <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
-        <figcaption>
-          <span class="alumni-name">Ikay U.</span>
-          <span class="alumni-role">AWS Solution Architect</span>
-        </figcaption>
-      </figure>
+            <figure class="alumni-tile alumni-tile--xl" data-rotate-images="assets/alumni/alumni-1.jpg,assets/alumni/alumni-2.jpg,assets/alumni/alumni-3.jpg,assets/alumni/alumni-4.jpg">
+              <img src="assets/alumni/alumni-1.jpg" alt="Alumni testimonial: Ikay U." loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Ikay U.</span>
+                <span class="alumni-role">AWS Solution Architect</span>
+              </figcaption>
+            </figure>
 
-      <figure class="alumni-tile">
-        <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
-        <figcaption>
-          <span class="alumni-name">Adelia Manuel</span>
-          <span class="alumni-role">Cloud Engineer</span>
-        </figcaption>
-      </figure>
+            <figure class="alumni-tile alumni-tile--xl" data-rotate-images="assets/alumni/alumni-2.jpg,assets/alumni/alumni-3.jpg,assets/alumni/alumni-4.jpg,assets/alumni/alumni-1.jpg">
+              <img src="assets/alumni/alumni-2.jpg" alt="Alumni testimonial: Adelia Manuel" loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Adelia Manuel</span>
+                <span class="alumni-role">Cloud Engineer</span>
+              </figcaption>
+            </figure>
 
-      <figure class="alumni-tile">
-        <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
-        <figcaption>
-          <span class="alumni-name">Thelma N.</span>
-          <span class="alumni-role">Cloud Security Specialist</span>
-        </figcaption>
-      </figure>
+            <figure class="alumni-tile alumni-tile--xl" data-rotate-images="assets/alumni/alumni-3.jpg,assets/alumni/alumni-4.jpg,assets/alumni/alumni-1.jpg,assets/alumni/alumni-2.jpg">
+              <img src="assets/alumni/alumni-3.jpg" alt="Alumni testimonial: Thelma N." loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Thelma N.</span>
+                <span class="alumni-role">Cloud Security Specialist</span>
+              </figcaption>
+            </figure>
 
-      <figure class="alumni-tile">
-        <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
-        <figcaption>
-          <span class="alumni-name">Gideon A.</span>
-          <span class="alumni-role">Alumni</span>
-        </figcaption>
-      </figure>
-    </div>
+            <figure class="alumni-tile alumni-tile--xl" data-rotate-images="assets/alumni/alumni-4.jpg,assets/alumni/alumni-1.jpg,assets/alumni/alumni-2.jpg,assets/alumni/alumni-3.jpg">
+              <img src="assets/alumni/alumni-4.jpg" alt="Alumni testimonial: Gideon Aiyegunle" loading="lazy" />
+              <figcaption>
+                <span class="alumni-name">Gideon Aiyegunle</span>
+                <span class="alumni-role">Alumni</span>
+              </figcaption>
+            </figure>
+          </div>
 
-    <div class="alumni-strip-actions">
-      <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
-      <a class="btn btn-ghost btn-sm" href="testimonials.html">See all testimonials</a>
-    </div>
-  </div>
-</section>
+          <div class="alumni-strip-actions">
+            <a class="btn btn-primary btn-sm" href="contact.html">Enroll Now</a>
+            <a class="btn btn-ghost btn-sm" href="testimonials.html">See all testimonials</a>
+          </div>
+        </div>
+      </section>
 
-
-      <!-- CHOOSE YOUR TRACK -->
+      <!-- TRACKS -->
       <section class="section" id="tracks">
         <div class="container">
           <div class="section-head">
@@ -197,7 +183,7 @@
             <article class="card">
               <div class="card-icon">📊</div>
               <h3>Data Science</h3>
-              <p class="muted">Data analysis, modelling basics, and hands-on projects to build confidence.</p>
+              <p class="muted">Analysis, modelling basics, and hands-on projects to build confidence.</p>
               <div class="card-actions">
                 <a class="link" href="courses.html#data-science">View details →</a>
               </div>
@@ -272,6 +258,37 @@
         </div>
       </section>
 
+      <!-- RECRUITMENT ASSISTANCE -->
+      <section class="section">
+        <div class="container">
+          <div class="two-col">
+            <div class="panel">
+              <h3 class="panel-title">Recruitment Assistance</h3>
+              <p class="muted">
+                We help you position your skills: CV improvements, interview preparation, and guidance for your next role.
+              </p>
+              <ul class="list">
+                <li>CV and LinkedIn optimisation</li>
+                <li>Mock interviews and technical prep</li>
+                <li>Role-focused study & project recommendations</li>
+              </ul>
+              <a class="btn btn-primary btn-block" href="contact.html">Get Career Support</a>
+            </div>
+
+            <div>
+              <h2>Support that continues beyond the class.</h2>
+              <p class="muted">
+                You don’t just “finish a course” — you build confidence, get feedback, and prepare for real interviews.
+              </p>
+              <div class="inline-actions">
+                <a class="btn btn-primary" href="contact.html">Enroll Now</a>
+                <a class="btn btn-ghost" href="testimonials.html">See outcomes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- FINAL CTA -->
       <section class="section section-cta">
         <div class="container cta-box">
@@ -281,7 +298,7 @@
           </div>
           <div class="cta-actions">
             <a class="btn btn-primary" href="contact.html">Enroll Now</a>
-            <a class="btn btn-ghost" href="courses.html">View Courses</a>
+            <a class="btn btn-ghost" href="courses.html">View Course Info</a>
           </div>
         </div>
       </section>
@@ -299,7 +316,7 @@
         </div>
 
         <div>
-          <div class="footer-title">Explore</div>
+          <div class="footer-title">Prospective Students</div>
           <ul class="footer-links">
             <li><a href="courses.html">Courses</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
@@ -311,6 +328,7 @@
           <div class="footer-title">Support</div>
           <ul class="footer-links">
             <li><a href="contact.html">Enroll / Book Consultation</a></li>
+            <li><a href="corporate.html">Corporate / Consulting</a></li>
           </ul>
         </div>
 
@@ -320,6 +338,7 @@
             <li><a href="student-handbook.html">Student Handbook</a></li>
             <li><a href="gdpr.html">GDPR</a></li>
             <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="about.html#accreditation">Accreditation (Placeholder)</a></li>
           </ul>
         </div>
       </div>
@@ -329,16 +348,6 @@
       </div>
     </footer>
 
-    <script>
-      const toggle = document.querySelector(".nav-toggle");
-      const nav = document.querySelector(".nav");
-      if (toggle && nav) {
-        toggle.addEventListener("click", () => {
-          const isOpen = nav.classList.toggle("nav-open");
-          toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-      }
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-    </script>
+    <script src="js/site.js"></script>
   </body>
 </html>
