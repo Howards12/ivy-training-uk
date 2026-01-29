@@ -4,211 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Course Info | Ivy Training &amp; Consulting UK</title>
+    <title>Courses | Ivy Training &amp; Consulting UK</title>
     <meta
       name="description"
-      content="Explore Ivy Training & Consulting UK courses: Solution Architect, Data Science, AI Practitioner, Cloud Engineer, DevOps Engineer, and AI for Engineers. Cohort-based, hands-on training with career support."
+      content="Explore Ivy Training & Consulting UK courses: Solution Architect, Data Science, AI Practitioner, Cloud Engineer, DevOps Engineer, and AI for Engineers."
     />
 
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Course Info | Ivy Training & Consulting UK" />
+    <meta property="og:title" content="Courses | Ivy Training & Consulting UK" />
     <meta
       property="og:description"
-      content="Choose your track: Solution Architect, Data Science, AI Practitioner, Cloud Engineer, DevOps Engineer, AI for Engineers."
+      content="Explore our 6 structured training tracks with practical projects and career support."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.ivytrainingco.uk/courses.html" />
     <meta property="og:image" content="assets/hero.jpg" />
 
     <meta name="theme-color" content="#0b1510" />
-
     <link rel="icon" href="assets/logo.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- Page-only helpers (keeps theme, no global changes) -->
-    <style>
-      .page-courses .page-hero {
-        padding-top: 34px;
-        padding-bottom: 18px;
-      }
-
-      .page-courses .page-title {
-        margin: 0 0 10px;
-        font-size: clamp(26px, 3.2vw, 38px);
-        letter-spacing: -0.02em;
-      }
-
-      .page-courses .filters {
-        margin-top: 14px;
-      }
-
-      .page-courses .pill-row {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-
-      .page-courses .course-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        margin-top: 18px;
-      }
-
-      @media (max-width: 900px) {
-        .page-courses .course-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .page-courses .course-card {
-        background: rgba(255, 255, 255, 0.07);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        border-radius: 18px;
-        padding: 16px;
-      }
-
-      .page-courses .course-top {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 14px;
-        margin-bottom: 10px;
-      }
-
-      .page-courses .course-icon {
-        width: 42px;
-        height: 42px;
-        display: grid;
-        place-items: center;
-        border-radius: 14px;
-        background: rgba(0, 0, 0, 0.18);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        flex: 0 0 auto;
-      }
-
-      .page-courses .course-title {
-        margin: 0;
-        font-size: 18px;
-        letter-spacing: 0.2px;
-      }
-
-      .page-courses .course-sub {
-        margin: 6px 0 0;
-        color: rgba(242, 246, 244, 0.78);
-        line-height: 1.55;
-      }
-
-      .page-courses .meta-row {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-
-      .page-courses .meta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 10px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        color: rgba(242, 246, 244, 0.75);
-        font-size: 13px;
-      }
-
-      .page-courses .course-actions {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 14px;
-      }
-
-      /* details/summary - clean accordion */
-      .page-courses details {
-        margin-top: 14px;
-        border-top: 1px solid rgba(255, 255, 255, 0.10);
-        padding-top: 12px;
-      }
-
-      .page-courses summary {
-        cursor: pointer;
-        list-style: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        user-select: none;
-      }
-
-      .page-courses summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .page-courses .chev {
-        width: 34px;
-        height: 34px;
-        border-radius: 12px;
-        display: grid;
-        place-items: center;
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        background: rgba(0, 0, 0, 0.14);
-      }
-
-      .page-courses details[open] .chev {
-        transform: rotate(180deg);
-      }
-
-      .page-courses .outline {
-        margin-top: 10px;
-        color: rgba(242, 246, 244, 0.78);
-        line-height: 1.8;
-        padding-left: 18px;
-      }
-
-      .page-courses .note {
-        margin-top: 10px;
-        padding: 12px 14px;
-        border-radius: 16px;
-        border: 1px dashed rgba(199, 173, 115, 0.45);
-        background: rgba(199, 173, 115, 0.10);
-        color: rgba(242, 246, 244, 0.75);
-      }
-
-      /* Jump nav */
-      .page-courses .jump {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 12px;
-      }
-
-      .page-courses .jump a {
-        display: inline-flex;
-        padding: 10px 12px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.06);
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        color: rgba(242, 246, 244, 0.82);
-      }
-
-      .page-courses .jump a:hover {
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      /* Keep anchors from hiding behind sticky header */
-      .page-courses section[id] {
-        scroll-margin-top: 110px;
-      }
-    </style>
   </head>
 
-  <body class="page-courses">
+  <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Header (same as your streamlined header) -->
+    <!-- Header (same as homepage) -->
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html" aria-label="Ivy Training & Consulting UK Home">
@@ -224,22 +42,11 @@
         </button>
 
         <nav class="nav" aria-label="Primary navigation">
-          <div class="nav-groups">
-            <div class="nav-group">
-              <span class="nav-group-label">Prospective Students</span>
-              <div class="nav-links">
-                <a href="courses.html" aria-current="page">Course Info</a>
-                <a href="testimonials.html">Testimonials</a>
-                <a href="about.html">About</a>
-              </div>
-            </div>
-
-            <div class="nav-group">
-              <span class="nav-group-label">Support</span>
-              <div class="nav-links">
-                <a href="contact.html">Book Consultation</a>
-              </div>
-            </div>
+          <div class="nav-links">
+            <a href="courses.html" aria-current="page">Courses</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
           </div>
 
           <div class="nav-cta">
@@ -251,320 +58,242 @@
     </header>
 
     <main id="main">
-      <!-- Page hero -->
-      <section class="section page-hero">
+      <section class="section section-tight">
         <div class="container">
-          <h1 class="page-title">Course Info</h1>
-          <p class="muted" style="margin: 0; max-width: 92ch">
-            Choose the track that matches your goal. All programs are cohort-based, hands-on, and built to help you
-            learn by doing — with clear structure, support, and portfolio-ready outcomes.
-          </p>
+          <div class="section-head section-head-tight">
+            <div>
+              <h1 style="margin: 0 0 10px">Courses</h1>
+              <p class="muted" style="max-width: 80ch; margin: 0">
+                Choose a track, follow a structured plan, and graduate with practical project experience. If you’re not
+                sure which track fits your goal, book a consultation and we’ll guide you.
+              </p>
+            </div>
 
-          <div class="jump" aria-label="Jump to a course">
-            <a href="#solution-architect">Solution Architect</a>
-            <a href="#data-science">Data Science</a>
-            <a href="#ai-practitioner">AI Practitioner</a>
-            <a href="#cloud-engineer">Cloud Engineer</a>
-            <a href="#devops-engineer">DevOps Engineer</a>
-            <a href="#ai-for-engineers">AI for Engineers</a>
-          </div>
-
-          <div class="note">
-            <strong>How enrollment works:</strong> submit the form and we’ll confirm cohort availability, schedule, pricing,
-            and onboarding steps.
+            <div class="section-actions">
+              <a class="btn btn-primary btn-sm" href="contact.html">Book Consultation</a>
+              <a class="btn btn-ghost btn-sm" href="testimonials.html">Watch Alumni Stories</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Course grid -->
-      <section class="section">
+      <section class="section" id="tracks">
         <div class="container">
-          <div class="section-head" style="margin-bottom: 8px">
-            <h2 style="margin: 0">Tracks (6)</h2>
-            <p class="muted" style="margin: 0">Click “View outline” for what you’ll learn.</p>
+          <div class="section-head">
+            <h2>Our 6 Tracks</h2>
+            <p class="muted">Click a card to jump to the full overview.</p>
           </div>
 
-          <div class="course-grid">
-            <!-- 1) Solution Architect -->
-            <article class="course-card" id="solution-architect">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">🏗️</div>
-                  <div>
-                    <h3 class="course-title">Solution Architect</h3>
-                    <p class="course-sub">
-                      Learn how to design secure, reliable architectures and explain tradeoffs confidently — built for
-                      real interview + job outcomes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 8–12 weeks</span>
-                <span class="meta">🧩 Hands-on projects</span>
-                <span class="meta">🎯 Interview support</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>Core architecture principles (security, reliability, cost, performance)</li>
-                  <li>Networking foundations (VPCs, subnets, routing, connectivity)</li>
-                  <li>Compute patterns (serverless, containers, VMs)</li>
-                  <li>Storage + databases (tradeoffs and selection)</li>
-                  <li>Monitoring, logging, and operational readiness</li>
-                  <li>Capstone: architecture + design review + final demo</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+          <div class="cards">
+            <article class="card">
+              <div class="card-icon">🏗️</div>
+              <h3><a class="link" href="#solution-architect">Solution Architect</a></h3>
+              <p class="muted">Architecture fundamentals, best practices, and real-world solution design.</p>
             </article>
 
-            <!-- 2) Data Science -->
-            <article class="course-card" id="data-science">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">📊</div>
-                  <div>
-                    <h3 class="course-title">Data Science</h3>
-                    <p class="course-sub">
-                      Build confidence with data exploration, analysis, and practical modelling — using real datasets and
-                      clear project milestones.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 8–12 weeks</span>
-                <span class="meta">📁 Portfolio project</span>
-                <span class="meta">🧠 Practical modelling</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>Data literacy: types, quality checks, and cleaning</li>
-                  <li>Exploratory analysis and storytelling with charts</li>
-                  <li>Basic statistics for practical decision-making</li>
-                  <li>Intro modelling (baseline → improved models)</li>
-                  <li>Feature engineering and evaluation basics</li>
-                  <li>Capstone: end-to-end analysis + presentation</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+            <article class="card">
+              <div class="card-icon">📊</div>
+              <h3><a class="link" href="#data-science">Data Science</a></h3>
+              <p class="muted">Data analysis, modelling foundations, and hands-on projects that build confidence.</p>
             </article>
 
-            <!-- 3) AI Practitioner -->
-            <article class="course-card" id="ai-practitioner">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">✨</div>
-                  <div>
-                    <h3 class="course-title">AI Practitioner</h3>
-                    <p class="course-sub">
-                      Practical AI foundations for real work — concepts, tools, and use-cases, with guided mini-projects.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 6–10 weeks</span>
-                <span class="meta">🧰 Tools + workflows</span>
-                <span class="meta">🧩 Use-case driven</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>AI basics: terminology, workflow, and limitations</li>
-                  <li>Prompting + evaluation (quality and safety)</li>
-                  <li>Data basics for AI: what matters and why</li>
-                  <li>Applied mini-projects and documentation</li>
-                  <li>Responsible AI and practical governance</li>
-                  <li>Capstone: a deployable/useful AI workflow demo</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+            <article class="card">
+              <div class="card-icon">✨</div>
+              <h3><a class="link" href="#ai-practitioner">AI Practitioner</a></h3>
+              <p class="muted">Practical AI foundations, applied tooling, and business-ready use cases.</p>
             </article>
 
-            <!-- 4) Cloud Engineer -->
-            <article class="course-card" id="cloud-engineer">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">☁️</div>
-                  <div>
-                    <h3 class="course-title">Cloud Engineer</h3>
-                    <p class="course-sub">
-                      Get job-ready with core cloud operations: deployments, networking, security basics, and monitoring —
-                      with real hands-on labs.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 8–12 weeks</span>
-                <span class="meta">🧪 Weekly labs</span>
-                <span class="meta">🔐 Security basics</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>Compute + storage fundamentals</li>
-                  <li>Networking foundations for real deployments</li>
-                  <li>Identity &amp; access basics (least privilege mindset)</li>
-                  <li>Observability: logs, metrics, dashboards</li>
-                  <li>Troubleshooting patterns and operational runbooks</li>
-                  <li>Capstone: deploy a working app + monitoring</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+            <article class="card">
+              <div class="card-icon">☁️</div>
+              <h3><a class="link" href="#cloud-engineer">Cloud Engineer</a></h3>
+              <p class="muted">Core cloud skills, deployments, networking, and operational confidence.</p>
             </article>
 
-            <!-- 5) DevOps Engineer -->
-            <article class="course-card" id="devops-engineer">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">♾️</div>
-                  <div>
-                    <h3 class="course-title">DevOps Engineer</h3>
-                    <p class="course-sub">
-                      Build CI/CD pipelines, automate deployments, and learn the mindset behind reliable delivery —
-                      infrastructure-as-code, monitoring, and production practices.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 8–12 weeks</span>
-                <span class="meta">🚀 CI/CD</span>
-                <span class="meta">🧱 IaC + automation</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>CI/CD fundamentals and pipeline design</li>
-                  <li>Infrastructure-as-code workflow</li>
-                  <li>Deployment strategies + rollback thinking</li>
-                  <li>Monitoring, alerting, and SLO basics</li>
-                  <li>Secrets, environments, and release discipline</li>
-                  <li>Capstone: pipeline + automated deployment demo</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+            <article class="card">
+              <div class="card-icon">♾️</div>
+              <h3><a class="link" href="#devops-engineer">DevOps Engineer</a></h3>
+              <p class="muted">CI/CD, IaC, automation, monitoring, and production-ready practices.</p>
             </article>
 
-            <!-- 6) AI for Engineers -->
-            <article class="course-card" id="ai-for-engineers">
-              <div class="course-top">
-                <div style="display: flex; gap: 12px; align-items: flex-start">
-                  <div class="course-icon" aria-hidden="true">🤖</div>
-                  <div>
-                    <h3 class="course-title">AI for Engineers</h3>
-                    <p class="course-sub">
-                      Engineering-focused AI delivery: build useful AI features, structure projects properly, and ship a
-                      working demo — without hand-wavy theory.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="meta-row" aria-label="Course meta">
-                <span class="meta">⏱️ 8–12 weeks</span>
-                <span class="meta">🧠 Applied AI</span>
-                <span class="meta">🧩 Build + ship</span>
-              </div>
-
-              <details>
-                <summary>
-                  <span><strong>View outline</strong></span>
-                  <span class="chev" aria-hidden="true">⌄</span>
-                </summary>
-                <ul class="outline">
-                  <li>How to plan AI features (inputs, outputs, evaluation)</li>
-                  <li>Building blocks: prompts, retrieval patterns, tool use</li>
-                  <li>Quality and safety checks in real workflows</li>
-                  <li>Observability for AI features (logging + feedback loops)</li>
-                  <li>Packaging: documentation, demos, and deployment basics</li>
-                  <li>Capstone: working AI-powered feature + demo</li>
-                </ul>
-              </details>
-
-              <div class="course-actions">
-                <a class="btn btn-primary btn--small" href="contact.html">Enroll / Book Consultation</a>
-                <a class="btn btn-ghost btn--small" href="testimonials.html">See outcomes</a>
-              </div>
+            <article class="card">
+              <div class="card-icon">🤖</div>
+              <h3><a class="link" href="#ai-for-engineers">AI for Engineers</a></h3>
+              <p class="muted">Engineering-focused AI projects and delivery patterns for real teams.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- CTA -->
+      <section class="section" id="solution-architect">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>Solution Architect</h2>
+              <p class="muted">
+                Learn how to design secure, reliable, cost-aware cloud solutions. You’ll practice architecture patterns,
+                documentation, and real solution design thinking.
+              </p>
+              <ul class="list">
+                <li>Core architecture patterns + trade-offs</li>
+                <li>Networking, identity, storage, compute foundations</li>
+                <li>Well-Architected thinking (security, reliability, cost)</li>
+                <li>Portfolio-style architecture mini-project</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">People targeting Solution Architect / Pre-sales / Cloud design roles.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="data-science">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>Data Science</h2>
+              <p class="muted">
+                Build confidence working with real data: analysis, visualisation, modelling basics, and storytelling.
+              </p>
+              <ul class="list">
+                <li>Data cleaning + exploration</li>
+                <li>Visualisation + dashboards mindset</li>
+                <li>Modelling foundations + evaluation basics</li>
+                <li>Project: end-to-end analysis & reporting</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">Career switchers and analysts moving into data roles.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ai-practitioner">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>AI Practitioner</h2>
+              <p class="muted">
+                Learn AI fundamentals and how to apply modern AI tools in practical, business-aligned ways.
+              </p>
+              <ul class="list">
+                <li>AI/ML basics explained clearly</li>
+                <li>Prompting + responsible usage</li>
+                <li>Use cases: customer support, automation, research</li>
+                <li>Mini-project: AI workflow for a real scenario</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">Professionals needing AI fluency and confident practical application.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cloud-engineer">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>Cloud Engineer</h2>
+              <p class="muted">
+                Learn cloud operations and delivery basics: deploying services, managing networking, and troubleshooting.
+              </p>
+              <ul class="list">
+                <li>Compute + storage + networking fundamentals</li>
+                <li>Deployments and operational workflows</li>
+                <li>Security basics and access control mindset</li>
+                <li>Project: deploy a small production-style app</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">Entry to mid-level cloud engineering roles.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="devops-engineer">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>DevOps Engineer</h2>
+              <p class="muted">
+                Build CI/CD confidence, Infrastructure-as-Code habits, and production-ready monitoring practices.
+              </p>
+              <ul class="list">
+                <li>CI/CD pipelines and automation habits</li>
+                <li>IaC mindset + repeatable environments</li>
+                <li>Observability: logs, metrics, alerts</li>
+                <li>Project: automated deployment pipeline</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">Engineers moving into DevOps / Platform Engineering roles.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="ai-for-engineers">
+        <div class="container">
+          <div class="two-col">
+            <div>
+              <h2>AI for Engineers</h2>
+              <p class="muted">
+                Learn how engineers use AI in real projects: building, integrating, evaluating, and shipping safely.
+              </p>
+              <ul class="list">
+                <li>Applied AI concepts for builders</li>
+                <li>Integrating AI into apps and workflows</li>
+                <li>Evaluation + reliability + safety basics</li>
+                <li>Project: ship a small AI-enabled feature</li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3 class="panel-title">Best for</h3>
+              <p class="muted">Developers and engineers who want to build AI-enabled products.</p>
+              <a class="btn btn-primary btn-block" href="contact.html">Enroll / Book Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section section-cta">
         <div class="container cta-box">
           <div>
             <h2>Not sure which track fits you?</h2>
-            <p class="muted" style="margin: 0; max-width: 80ch">
-              Book a consultation. Tell us your background and your target role — we’ll recommend the best track and a
-              realistic plan.
-            </p>
+            <p class="muted">Tell us your goal — we’ll recommend the best path and next steps.</p>
           </div>
           <div class="cta-actions">
             <a class="btn btn-primary" href="contact.html">Book Consultation</a>
-            <a class="btn btn-ghost" href="testimonials.html">Hear from alumni</a>
+            <a class="btn btn-ghost" href="testimonials.html">See Alumni Stories</a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer (same as your site) -->
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
           <div class="footer-brand">Ivy Training &amp; Consulting UK</div>
-          <p class="muted">
-            Instructor-led training in Cloud, DevOps and AI with practical projects and career support.
-          </p>
+          <p class="muted">Instructor-led training in Cloud, DevOps and AI with practical projects and career support.</p>
           <p class="muted"><strong>Email:</strong> ivytrainingcouk@gmail.com</p>
         </div>
 
@@ -602,7 +331,6 @@
     </footer>
 
     <script>
-      // Mobile nav toggle (same pattern as your other pages)
       const toggle = document.querySelector(".nav-toggle");
       const nav = document.querySelector(".nav");
       if (toggle && nav) {
@@ -615,3 +343,4 @@
     </script>
   </body>
 </html>
+
