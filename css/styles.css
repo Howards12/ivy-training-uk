@@ -538,3 +538,11 @@ select {
 }
 
 textarea { min-height: 120px; resize: vertical; }
+/* Alumni Highlights — bigger + hover readability (homepage) */
+.alumni-strip { overflow: visible; }
+.alumni-tile { will-change: transform; }
+.alumni-tile:hover,
+.alumni-tile:focus-within {
+  transform: scale(1.10);
+  z-index: 20;
+}
