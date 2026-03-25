@@ -33,6 +33,16 @@
       description:
         "A structured 10-week, hands-on program with labs, projects and career support.",
     },
+    "solution-architecture.html": {
+      name: "Solution Architecture",
+      description:
+        "A structured 10-week, hands-on program with labs, projects and career support.",
+    },
+    "data-science.html": {
+      name: "Data Science",
+      description:
+        "A structured 10-week, hands-on program with labs, projects and career support.",
+    },
     "ai-for-engineers.html": {
       name: "AI for Engineers",
       description:

@@ -34,7 +34,7 @@
 
     <button class="nav__toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-menu-toggle>☰</button>
 
-    <div class="nav__links" id="site-menu" data-menu hidden>
+    <div class="nav__links" id="site-menu" data-menu>
       <a class="nav__group-label nav__group-link" href="courses.html">Prospective Students</a>
       <a class="nav__link" href="courses.html">Course Info</a>
       <a class="nav__link" href="professionals.html">Working Professionals</a>
@@ -51,10 +51,6 @@
   <main>
   <section class="hero hero--premium">
   <div class="hero__bg">
-    <!-- Use a clean, non-text background. Add one of these to /assets:
-         - hero-clean.mp4 (preferred) OR
-         - hero-clean.jpg (fallback)
-    -->
     <video class="hero__bg-media" autoplay muted loop playsinline preload="none" poster="assets/hero-clean.jpg">
       <source src="assets/VIDEO-2026-01-23-11-13-20.mp4" type="video/mp4" />
     </video>
@@ -75,7 +71,29 @@
   </div>
 </section>
 
-  
+<section class="section section--robo" aria-label="Introductory video">
+  <div class="container">
+    <div class="robo-video__frame">
+      <video
+        class="robo-video"
+        data-robo-intro
+        controls
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="assets/hero-clean.jpg"
+        aria-label="Ivy Training introductory video"
+        controlsList="nodownload"
+      >
+        <source src="assets/robo-vid.mp4" type="video/mp4" />
+      </video>
+      <div class="robo-video__clean-mask" aria-hidden="true"></div>
+      <p class="muted robo-video__hint">Plays muted automatically; use the speaker control for sound.</p>
+    </div>
+  </div>
+</section>
 
 <section class="section banner">
   <div class="container">
@@ -98,84 +116,31 @@
   </div>
 </section>
 
-<section class="section">
-    <div class="container">
-      <h2>Training paths</h2>
-      <p class="muted">Choose a track that matches your goal. We’ll guide you from fundamentals to job-ready projects.</p>
-
-      <div class="grid grid--cards grid--cards-center" style="margin-top:16px;">
-        <article class="card">
-          <h3>Cloud Engineering</h3>
-          <p>Cloud fundamentals, networking, IAM, storage/compute, automation and deployments.</p>
-        </article>
-        <article class="card">
-          <h3>DevOps</h3>
-          <p>CI/CD, Infrastructure as Code, containers, observability, release engineering.</p>
-        </article>
-        <article class="card">
-          <h3>Solution Architecture</h3>
-          <p>Design scalable systems with security, HA/DR, and cost optimisation in mind.</p>
-        </article>
-        <article class="card">
-          <h3>Data Science</h3>
-          <p>Python, analytics, ML foundations, and portfolio projects with storytelling.</p>
-        </article>
-        <article class="card">
-          <h3>AI</h3>
-          <p>Applied AI workflows, prompting, model basics, and responsible AI practices.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="section section--alt">
     <div class="container">
       <div class="section__head">
         <h2>Featured courses</h2>
-        <a class="text-link" href="courses.html">View all courses →</a>
+        <a class="text-link" href="courses.html">View all programs →</a>
       </div>
+      <p class="muted section__lede">Hands-on labs, portfolio projects, and flexible cohorts—from cloud fundamentals to applied AI.</p>
       <div class="grid grid--cards" id="featuredCourses" style="margin-top:16px;"></div>
+      <p class="muted trust-line">
+        Instructors certified across AWS, IBM, Google &amp; Microsoft Azure
+        <span class="brand-chips" aria-hidden="true">
+          <img class="brand-chip" src="assets/brands/official/aws.svg" alt="" loading="lazy" decoding="async" />
+          <img class="brand-chip" src="assets/brands/official/ibm.svg" alt="" loading="lazy" decoding="async" />
+          <img class="brand-chip" src="assets/brands/official/google.svg" alt="" loading="lazy" decoding="async" />
+          <img class="brand-chip" src="assets/brands/official/microsoft-azure.svg" alt="" loading="lazy" decoding="async" />
+        </span>
+      </p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container">
-      <h2>Why learners choose Ivy</h2>
-      <div class="grid grid--two" style="margin-top:16px;">
-        <div class="panel">
-          <h3>Built for outcomes</h3>
-          <ul class="list">
-            <li>Hands-on labs (not just theory)</li>
-            <li>Portfolio-ready projects</li>
-            <li>Mock interviews &amp; career guidance</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Designed for busy schedules</h3>
-          <ul class="list">
-            <li>Flexible cohorts</li>
-            <li>Recorded sessions + notes</li>
-            <li>Instructor support</li>
-            <li>
-              Instructors certified across AWS, IBM, Google &amp; Microsoft Azure
-              <span class="brand-chips" aria-hidden="true">
-                <img class="brand-chip" src="assets/brands/official/aws.svg" alt="" loading="lazy" decoding="async" />
-                <img class="brand-chip" src="assets/brands/official/ibm.svg" alt="" loading="lazy" decoding="async" />
-                <img class="brand-chip" src="assets/brands/official/google.svg" alt="" loading="lazy" decoding="async" />
-                <img class="brand-chip" src="assets/brands/official/microsoft-azure.svg" alt="" loading="lazy" decoding="async" />
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt">
   <div class="container">
     <div class="section__head">
       <h2>Alumni testimonial videos</h2>
-      <a class="text-link" href="contact.html">Enroll Now →</a>
+      <a class="text-link" href="courses.html">More programs →</a>
     </div>
 
     <div class="grid grid--cards testimonial-grid" style="margin-top:16px;">
@@ -184,7 +149,6 @@
         <video class="video" controls preload="none" poster="assets/hero.jpg">
           <source src="assets/VIDEO-2026-01-23-11-13-21.mp4" type="video/mp4" />
         </video>
-        <p class="muted" style="margin-top:10px;">Works great for corporate cohorts and bootcamps.</p>
       </article>
 
       <article class="card">
@@ -192,43 +156,25 @@
         <video class="video" controls preload="none" poster="assets/hero.jpg">
           <source src="assets/VIDEO-2026-01-23-11-13-26.mp4" type="video/mp4" />
         </video>
-        <p class="muted" style="margin-top:10px;">Ideal if most of your delivery is remote.</p>
-      </article>
-
-      <article class="card">
-        <h3 style="margin-top:0;">Alumni testimonial — hands‑on labs</h3>
-        <video class="video" controls preload="none" poster="assets/hero.jpg">
-          <source src="assets/VIDEO-2026-01-23-11-13-20.mp4" type="video/mp4" />
-        </video>
-        <p class="muted" style="margin-top:10px;">Shows practical labs and real working environments.</p>
       </article>
     </div>
   </div>
 </section>
 
-
 <section class="section section--alt">
-  <div class="container">
-    <div class="grid grid--two" style="align-items:start;">
-      <div class="panel">
-        <h2 style="margin-top:0;">Project experience</h2>
-        <p class="muted">Build a portfolio-ready capstone you can share with recruiters and hiring managers.</p>
-        <a class="btn btn--primary" href="courses.html">See the syllabi</a>
-      </div>
-
-      <div class="panel">
-        <h2 style="margin-top:0;">Recruitment assistance</h2>
-        <p class="muted">Get interview-ready with mock interviews, CV support, and clear role-based learning paths.</p>
-        <a class="btn btn--ghost" href="contact.html">Book Consultation</a>
-      </div>
+  <div class="container content-center">
+    <p class="muted" style="margin:0;">Portfolio-ready capstone work plus interview support—mock interviews, CV guidance, and clear learning paths.</p>
+    <div class="hero__buttons" style="margin-top:18px;">
+      <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+      <a class="btn btn--ghost" href="courses.html">Explore programs</a>
     </div>
   </div>
 </section>
 
   <section class="cta">
     <div class="container cta__inner">
-      <h2>Ready to upskill?</h2>
-      <p>Tell us your goal. We’ll recommend the best learning track.</p>
+      <h2>Still deciding?</h2>
+      <p>We’ll help you pick the right track.</p>
       <a class="btn btn--primary" href="contact.html">Enroll Now</a>
     </div>
   </section>

@@ -5,17 +5,19 @@ if (menuBtn && menu) {
   const setExpanded = (isOpen) => {
     menuBtn.setAttribute("aria-expanded", String(isOpen));
     menu.classList.toggle("is-open", isOpen);
-    if (isOpen) menu.removeAttribute("hidden");
-    else menu.setAttribute("hidden", "");
   };
 
-  // Initialize
-  if (!menu.hasAttribute("hidden")) menu.setAttribute("hidden", "");
   if (!menuBtn.hasAttribute("aria-expanded")) menuBtn.setAttribute("aria-expanded", "false");
 
   menuBtn.addEventListener("click", () => {
     const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
     setExpanded(!isOpen);
+  });
+
+  menu.querySelectorAll("a[href]").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.matchMedia("(max-width: 860px)").matches) setExpanded(false);
+    });
   });
 }
 
@@ -30,30 +32,78 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
   wrap.className = "vdm-widget";
 
   wrap.innerHTML = `
-    <img
-      class="vdm-widget__img"
-      src="assets/vdm-contact-widget.png"
-      alt="Chat with VDM AI contact options"
-      loading="lazy"
-      decoding="async"
-    />
-    <a class="vdm-widget__hit vdm-widget__hit--chat" href="#" aria-label="Open live chat"></a>
-    <a class="vdm-widget__hit vdm-widget__hit--wa" href="https://wa.me/13465466197" target="_blank" rel="noopener" aria-label="Chat on WhatsApp: +1 346 546 6197"></a>
+    <div class="vdm-widget__toolbar">
+      <button
+        type="button"
+        class="vdm-widget__toggle"
+        data-vdm-toggle
+        aria-expanded="true"
+        aria-controls="vdm-widget-panel"
+        id="vdm-widget-toggle"
+      >
+        <span class="vdm-widget__toggle-icon" aria-hidden="true">−</span>
+        <span class="sr-only">Collapse contact panel</span>
+      </button>
+    </div>
+    <div class="vdm-widget__panel" id="vdm-widget-panel" role="group" aria-labelledby="vdm-widget-toggle">
+      <img
+        class="vdm-widget__img"
+        src="assets/vdm-contact-widget.png"
+        alt="Chat with VDM AI contact options"
+        loading="lazy"
+        decoding="async"
+      />
+      <button type="button" class="vdm-widget__hit vdm-widget__hit--chat" aria-label="Open live chat"></button>
+      <a
+        class="vdm-widget__hit vdm-widget__hit--wa"
+        href="https://wa.me/13465466197"
+        rel="noopener noreferrer"
+        aria-label="Open WhatsApp chat: +1 346 546 6197"
+      ></a>
+    </div>
   `;
+
+  const openLiveChat = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
+      window.Tawk_API.maximize();
+      wrap.classList.add("vdm-widget--chat-open");
+      return;
+    }
+    window.location.href = "contact.html";
+  };
 
   const chatHit = wrap.querySelector(".vdm-widget__hit--chat");
   if (chatHit) {
-    chatHit.addEventListener("click", (e) => {
+    chatHit.addEventListener("click", openLiveChat);
+  }
+
+  const toggleBtn = wrap.querySelector("[data-vdm-toggle]");
+  const toggleIcon = toggleBtn && toggleBtn.querySelector(".vdm-widget__toggle-icon");
+  const srOnly = toggleBtn && toggleBtn.querySelector(".sr-only");
+  if (toggleBtn && toggleIcon && srOnly) {
+    const setCollapsed = (collapsed) => {
+      wrap.classList.toggle("vdm-widget--collapsed", collapsed);
+      toggleBtn.setAttribute("aria-expanded", String(!collapsed));
+      toggleIcon.textContent = collapsed ? "+" : "−";
+      srOnly.textContent = collapsed ? "Expand contact panel" : "Collapse contact panel";
+    };
+    toggleBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      if (window.Tawk_API && typeof window.Tawk_API.maximize === "function") {
-        window.Tawk_API.maximize();
-        return;
-      }
-      window.location.href = "contact.html";
+      e.stopPropagation();
+      setCollapsed(!wrap.classList.contains("vdm-widget--collapsed"));
     });
   }
 
+  const bumpAboveEmbeds = () => {
+    if (wrap.parentNode) document.body.appendChild(wrap);
+  };
+
   document.body.appendChild(wrap);
+  bumpAboveEmbeds();
+  window.addEventListener("load", bumpAboveEmbeds);
+  [800, 2500, 6000].forEach((ms) => window.setTimeout(bumpAboveEmbeds, ms));
 })();
 
 // Hide the default Tawk launcher (prevents overlap)
@@ -73,6 +123,40 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     attempts += 1;
     if (tryHide() || attempts > 40) window.clearInterval(id);
   }, 250);
+})();
+
+// Tawk: tuck PNG behind when chat opens; restore when minimized/ended (API names vary by embed version)
+(() => {
+  const wrap = document.querySelector(".vdm-widget");
+  if (!wrap) return;
+
+  const restoreLauncher = () => wrap.classList.remove("vdm-widget--chat-open");
+
+  const chain = (key, fn) => {
+    const api = window.Tawk_API;
+    if (!api || typeof key !== "string") return;
+    const prev = api[key];
+    api[key] = function () {
+      fn();
+      if (typeof prev === "function") return prev.apply(this, arguments);
+    };
+  };
+
+  const install = () => {
+    if (!window.Tawk_API || wrap.dataset.tawkZHook) return;
+    wrap.dataset.tawkZHook = "1";
+    chain("onChatMaximized", () => wrap.classList.add("vdm-widget--chat-open"));
+    chain("onChatStarted", () => wrap.classList.add("vdm-widget--chat-open"));
+    chain("onChatMinimized", restoreLauncher);
+    chain("onChatEnded", restoreLauncher);
+  };
+
+  let n = 0;
+  const poll = window.setInterval(() => {
+    n += 1;
+    install();
+    if (wrap.dataset.tawkZHook === "1" || n > 50) window.clearInterval(poll);
+  }, 200);
 })();
 
 // Footer credit (site-wide)
@@ -98,7 +182,6 @@ const featured = [
     href: "cloud-computing.html",
     blurb:
       "Networking, IAM, compute, storage, observability, and a deployable capstone.",
-    tags: ["Cloud", "Labs", "Capstone"],
   },
   {
     title: "DevOps Engineering",
@@ -106,7 +189,6 @@ const featured = [
     href: "devops-engineering.html",
     blurb:
       "CI/CD, containers, IaC, observability, secure pipelines, and reliable releases.",
-    tags: ["DevOps", "CI/CD", "IaC"],
   },
   {
     title: "AI for Engineers",
@@ -114,7 +196,6 @@ const featured = [
     href: "ai-for-engineers.html",
     blurb:
       "ML foundations, applied AI workflows, responsible AI, and a production-minded capstone.",
-    tags: ["AI", "Applied", "Capstone"],
   },
 ];
 
@@ -129,9 +210,6 @@ if (featuredGrid) {
           <span style="color:var(--gold);font-weight:700;font-size:14px;">${c.level}</span>
         </div>
         <p style="margin-top:10px;">${c.blurb}</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">
-          ${c.tags.map((t) => `<span class="badge">${t}</span>`).join("")}
-        </div>
         <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
           <a class="btn btn--ghost" href="${c.href}">View syllabus</a>
           <a class="btn btn--primary" href="contact.html">Enroll Now</a>
@@ -213,4 +291,15 @@ if (alumniCard && alumniImg && alumniCaption) {
   // Start autoplay
   show(0, { animate: false });
   start();
+}
+
+const roboIntro = document.querySelector("[data-robo-intro]");
+if (
+  roboIntro &&
+  window.matchMedia &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  roboIntro.removeAttribute("autoplay");
+  roboIntro.loop = false;
+  roboIntro.pause();
 }

@@ -194,6 +194,39 @@ img { max-width: 100%; display: block; }
 }
 .cta__inner { text-align: center; }
 .cta p { color: var(--muted); }
+.cta .hero__buttons {
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* Centered narrow blocks (reduced visual noise on key CTAs) */
+.content-center {
+  text-align: center;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-center .hero__buttons {
+  justify-content: center;
+}
+.section__lede {
+  margin: 8px 0 0;
+  max-width: 52ch;
+}
+.section__head + .section__lede,
+.section h2 + .section__lede {
+  margin-top: 6px;
+}
+.trust-line {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.trust-line .brand-chips {
+  display: inline-flex;
+  margin-left: 8px;
+  vertical-align: middle;
+}
 
 .footer { padding: 32px 0 22px; border-top: 0; position: relative; }
 .footer::before {
@@ -343,6 +376,54 @@ img { max-width: 100%; display: block; }
   mix-blend-mode: overlay;
   filter: blur(1px);
   opacity: 0.9;
+}
+
+/* Intro Robo video (home — first block above banner & alumni carousel) */
+.section--robo {
+  padding-top: 28px;
+  padding-bottom: 8px;
+}
+.robo-video__frame {
+  border-radius: 22px;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+.robo-video {
+  width: 100%;
+  height: auto;
+  max-height: min(70vh, 560px);
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: #050a08;
+  border-radius: 20px;
+}
+.robo-video__clean-mask {
+  position: absolute;
+  right: 14px;
+  bottom: 56px;
+  width: clamp(84px, 11vw, 124px);
+  height: clamp(28px, 3.8vw, 42px);
+  border-radius: 10px;
+  background: rgba(5, 10, 8, 0.88);
+  pointer-events: none;
+  z-index: 3;
+}
+.robo-video__hint {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+@media (max-width: 560px) {
+  .robo-video__clean-mask {
+    right: 10px;
+    bottom: 52px;
+    width: 88px;
+    height: 30px;
+  }
 }
 
 /* Banner section */
@@ -550,50 +631,156 @@ tr:last-child td { border-bottom: 0; }
   text-decoration: none;
   border-radius: 999px;
   padding: 6px 10px;
+  cursor: pointer;
 }
 .nav__group-link:hover {
   background: rgba(255,255,255,0.06);
   color: rgba(242, 246, 244, 0.82);
 }
 
-/* VDM contact widget (combined chat + WhatsApp) */
+/* VDM contact widget (combined chat + WhatsApp)
+   z-index must stay BELOW Tawk’s open chat (~2e9) so the chat UI isn’t covered by the PNG. */
 .vdm-widget {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  z-index: 10000;
+  z-index: 999999;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
   width: min(210px, 70vw);
-  /* Match the actual widget image ratio (682×1024) to avoid interpolation blur */
-  aspect-ratio: 682 / 1024;
   border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 22px 70px rgba(0,0,0,0.55);
   -webkit-tap-highlight-color: transparent;
+}
+/* When Tawk reports chat open, tuck launcher behind so the conversation stays on top */
+.vdm-widget--chat-open {
+  z-index: 100;
+}
+.vdm-widget__toolbar {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 6px 8px;
+  background: linear-gradient(180deg, rgba(6, 18, 12, 0.92), rgba(6, 18, 12, 0.75));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 20;
+  position: relative;
+}
+.vdm-widget__toggle {
+  appearance: none;
+  border: 1px solid rgba(199, 173, 115, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  width: 34px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.vdm-widget__toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.vdm-widget__toggle:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+.vdm-widget--collapsed .vdm-widget__toolbar {
+  border-bottom: 0;
+  border-radius: 22px;
+}
+.vdm-widget--collapsed .vdm-widget__panel {
+  display: none;
+}
+.vdm-widget__panel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 682 / 1024;
+  overflow: hidden;
 }
 .vdm-widget__img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: contain;
+  pointer-events: none;
+  user-select: none;
   /* Ensure crisp rendering on scaled-down hi-DPI */
   image-rendering: auto;
 }
 /* Invisible hit areas (keeps original image-only look) */
 .vdm-widget__hit {
   position: absolute;
-  left: 10%;
-  right: 10%;
-  height: 16%;
+  left: 8%;
+  right: 8%;
   border-radius: 16px;
   display: block;
+  pointer-events: auto;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 }
-.vdm-widget__hit--chat { top: 58%; }
-.vdm-widget__hit--wa { top: 76%; }
+button.vdm-widget__hit {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+a.vdm-widget__hit {
+  text-decoration: none;
+  color: transparent;
+}
+/* Chat zone — sits above the WhatsApp band (percentages are of .vdm-widget__panel height) */
+.vdm-widget__hit--chat {
+  top: 50%;
+  height: 10%;
+  max-height: 52px;
+  z-index: 1;
+}
+/*
+ * WhatsApp tap target — aligned to the icon on vdm-contact-widget.png (was too low at ~74%).
+ * Nudge left/right if your asset has the icon off-centre.
+ */
+.vdm-widget__hit--wa {
+  top: 61%;
+  left: 10%;
+  right: 10%;
+  width: auto;
+  height: 12%;
+  min-height: 40px;
+  max-height: 72px;
+  z-index: 10;
+}
 .vdm-widget__hit:focus { outline: none; }
 .vdm-widget__hit:focus-visible { outline: 2px solid rgba(199,173,115,0.45); outline-offset: 6px; }
 
 @media (max-width: 560px) {
   .vdm-widget { right: 12px; bottom: 12px; width: min(196px, 86vw); }
+  .vdm-widget__hit--chat {
+    top: 46%;
+    height: 10%;
+    max-height: 48px;
+  }
+  .vdm-widget__hit--wa {
+    top: 57%;
+    left: 8%;
+    right: 8%;
+    height: 13%;
+    min-height: 44px;
+    max-height: 68px;
+  }
 }
 
 /* Don't rely on CSS to hide Tawk; we hide it via Tawk_API in JS. */
