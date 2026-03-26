@@ -35,7 +35,7 @@
     <button class="nav__toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false" data-menu-toggle>☰</button>
 
     <div class="nav__links" id="site-menu" data-menu>
-      <a class="nav__group-label nav__group-link" href="courses.html">Prospective Students</a>
+      <a class="nav__group-label nav__group-link" href="alumni.html">Alumni pages</a>
       <a class="nav__link" href="courses.html">Course Info</a>
       <a class="nav__link" href="professionals.html">Working Professionals</a>
       <a class="nav__link" href="about.html">About</a>
@@ -66,7 +66,10 @@
     </p>
     <div class="hero__buttons">
       <a class="btn btn--primary" href="courses.html">Explore Courses</a>
-      <a class="btn btn--ghost" href="contact.html">Enroll Now</a>
+      <div class="enroll-cta">
+        <span class="enroll-cta__eyebrow">Get certified</span>
+        <a class="btn btn--ghost" href="contact.html">Enroll Now</a>
+      </div>
     </div>
   </div>
 </section>
@@ -95,26 +98,28 @@
   </div>
 </section>
 
-<section class="section banner">
+<section class="section alumni-link-section" aria-label="Alumni pages link">
   <div class="container">
-    <div class="banner__grid">
-      <div class="banner__card">
-        <img src="assets/hero.jpg" alt="Ivy Training & Consulting UK promotional banner in green and gold theme" class="banner__img" />
-        <a class="banner__cta" href="contact.html" aria-label="Enroll Now"><span class="sr-only">Enroll Now</span></a>
-      </div>
-
-      <aside class="alumni" aria-label="Alumni highlights">
-        <button class="alumni__card" type="button" data-alumni-carousel aria-label="Alumni highlight. Click to view next. Press and hold to pause.">
-          <span class="alumni__media">
-            <img class="alumni__img" data-alumni-img src="assets/alumni/alumni-1.jpg" alt="Ivy alumni highlight" loading="lazy" decoding="async" />
-          </span>
-          <span class="alumni__overlay" aria-hidden="true"></span>
-          <span class="alumni__caption" data-alumni-caption>Alumni spotlight</span>
-        </button>
-      </aside>
-    </div>
+    <a class="alumni-link" href="alumni.html" aria-label="Go to Alumni pages — real stories from real people">
+      <span class="alumni-link__headline">
+        <span class="alumni-link__title">Real stories from real people</span>
+        <span class="alumni-link__cta" aria-hidden="true">
+          <svg class="alumni-link__icon" viewBox="0 0 24 24" width="24" height="24" focusable="false" aria-hidden="true">
+            <path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z" />
+          </svg>
+          <span class="alumni-link__cta-text">Click here</span>
+        </span>
+      </span>
+      <span class="alumni-link__sub">Alumni pages</span>
+    </a>
   </div>
 </section>
+
+  <div class="container">
+    <p class="muted home-alumni-cert-hint">
+      Alumni we feature have earned <strong>AWS certification</strong> through Ivy’s training pathway—explore their stories on the Alumni pages.
+    </p>
+  </div>
 
   <section class="section section--alt">
     <div class="container">
@@ -136,36 +141,14 @@
     </div>
   </section>
 
-  <section class="section">
-  <div class="container">
-    <div class="section__head">
-      <h2>Alumni testimonial videos</h2>
-      <a class="text-link" href="courses.html">More programs →</a>
-    </div>
-
-    <div class="grid grid--cards testimonial-grid" style="margin-top:16px;">
-      <article class="card">
-        <h3 style="margin-top:0;">Alumni testimonial — in‑person cohort</h3>
-        <video class="video" controls preload="none" poster="assets/hero.jpg">
-          <source src="assets/VIDEO-2026-01-23-11-13-21.mp4" type="video/mp4" />
-        </video>
-      </article>
-
-      <article class="card">
-        <h3 style="margin-top:0;">Alumni testimonial — live online</h3>
-        <video class="video" controls preload="none" poster="assets/hero.jpg">
-          <source src="assets/VIDEO-2026-01-23-11-13-26.mp4" type="video/mp4" />
-        </video>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section class="section section--alt">
   <div class="container content-center">
     <p class="muted" style="margin:0;">Portfolio-ready capstone work plus interview support—mock interviews, CV guidance, and clear learning paths.</p>
     <div class="hero__buttons" style="margin-top:18px;">
-      <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+      <div class="enroll-cta">
+        <span class="enroll-cta__eyebrow">Get certified</span>
+        <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+      </div>
       <a class="btn btn--ghost" href="courses.html">Explore programs</a>
     </div>
   </div>
@@ -175,7 +158,10 @@
     <div class="container cta__inner">
       <h2>Still deciding?</h2>
       <p>We’ll help you pick the right track.</p>
-      <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+      <div class="enroll-cta enroll-cta--center">
+        <span class="enroll-cta__eyebrow">Get certified</span>
+        <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+      </div>
     </div>
   </section>
 </main>
@@ -190,6 +176,7 @@
 
     <div>
       <strong>Students</strong>
+      <a href="alumni.html">Alumni pages</a>
       <a href="courses.html">Course Info</a>
       <a href="student-handbook.html">Student Handbook</a>
       <a href="contact.html">Book Consultation</a>

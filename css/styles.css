@@ -98,7 +98,42 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 
-.hero__buttons { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+.hero__buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+/* Shown above every “Enroll Now” CTA */
+.enroll-cta {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.enroll-cta--compact {
+  gap: 4px;
+}
+.enroll-cta__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1.25;
+}
+@media (min-width: 480px) {
+  .enroll-cta__eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+  }
+}
+.enroll-cta--center {
+  align-items: center;
+  text-align: center;
+}
 
 .btn {
   display: inline-flex;
@@ -197,6 +232,7 @@ img { max-width: 100%; display: block; }
 .cta .hero__buttons {
   justify-content: center;
   margin-top: 16px;
+  align-items: flex-end;
 }
 
 /* Centered narrow blocks (reduced visual noise on key CTAs) */
@@ -208,6 +244,7 @@ img { max-width: 100%; display: block; }
 }
 .content-center .hero__buttons {
   justify-content: center;
+  align-items: flex-end;
 }
 .section__lede {
   margin: 8px 0 0;
@@ -333,6 +370,134 @@ img { max-width: 100%; display: block; }
 .testimonial-grid .card { text-align: center; }
 .testimonial-grid .video { margin-top: 10px; }
 .testimonial-grid .muted { margin-left: auto; margin-right: auto; }
+
+/* Alumni page: three testimonial columns; fixed playback frame (no layout jump / growth) */
+.page-alumni .testimonial-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 1099px) {
+  .page-alumni .testimonial-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
+
+.alumni-video-frame {
+  margin-top: 10px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(42vh, 380px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: #050a08;
+  overflow: hidden;
+  position: relative;
+}
+.alumni-video-frame .video {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  border-radius: 0;
+  border: 0;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  background: #050a08;
+}
+
+/* Featured alumni photo + thumbnail strip */
+.alumni-photo-feature {
+  aspect-ratio: 4 / 3;
+  max-height: min(52vh, 520px);
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.alumni-photo-feature img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.alumni-photo-caption {
+  margin: 12px 0 0;
+}
+.alumni-photo-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.alumni-photo-thumb {
+  padding: 0;
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.04);
+  width: 92px;
+  height: 69px;
+  flex: 0 0 auto;
+}
+.alumni-photo-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.alumni-photo-thumb:hover,
+.alumni-photo-thumb:focus-visible {
+  border-color: rgba(199, 173, 115, 0.55);
+  outline: none;
+}
+.alumni-photo-thumb.is-active {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(199, 173, 115, 0.35);
+}
+
+/* Alumni page: AWS certification callout */
+.alumni-aws-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(199, 173, 115, 0.28);
+  background: linear-gradient(135deg, rgba(107, 191, 107, 0.12), rgba(199, 173, 115, 0.08));
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 62ch;
+}
+.alumni-aws-note strong {
+  color: var(--text);
+  font-weight: 800;
+}
+.alumni-aws-note__badge {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 18px;
+  object-fit: contain;
+  margin-top: 3px;
+  opacity: 0.95;
+}
+.home-alumni-cert-hint {
+  margin: 14px auto 0;
+  max-width: 40rem;
+  text-align: center;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
 
 /* Brand logo chips (small thumbnails) */
 .brand-chips {
@@ -536,6 +701,69 @@ img { max-width: 100%; display: block; }
   100% { transform: perspective(900px) rotateY(0deg); }
 }
 .alumni__card.is-flipping { animation: alumniFlip 520ms ease-in-out; }
+
+/* Home: single alumni link right under intro video */
+.alumni-link-section {
+  padding-top: 16px;
+  padding-bottom: 28px;
+}
+.alumni-link {
+  display: grid;
+  gap: 10px;
+  padding: 18px 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: linear-gradient(135deg, rgba(107,191,107,0.14), rgba(199,173,115,0.10));
+  box-shadow: 0 18px 50px rgba(0,0,0,0.30);
+}
+.alumni-link__headline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+@media (min-width: 560px) {
+  .alumni-link__headline {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+  }
+}
+.alumni-link__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.alumni-link__icon {
+  flex: 0 0 auto;
+  opacity: 0.95;
+}
+.alumni-link:hover {
+  border-color: rgba(199,173,115,0.28);
+  background: linear-gradient(135deg, rgba(107,191,107,0.18), rgba(199,173,115,0.14));
+}
+.alumni-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+.alumni-link__title {
+  font-size: clamp(24px, 4vw, 38px);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
+}
+.alumni-link__sub {
+  justify-self: start;
+  color: var(--gold);
+  font-weight: 900;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .alumni__card.is-flipping { animation: none; }

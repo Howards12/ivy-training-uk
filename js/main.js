@@ -210,9 +210,12 @@ if (featuredGrid) {
           <span style="color:var(--gold);font-weight:700;font-size:14px;">${c.level}</span>
         </div>
         <p style="margin-top:10px;">${c.blurb}</p>
-        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+        <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end;">
           <a class="btn btn--ghost" href="${c.href}">View syllabus</a>
-          <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+          <div class="enroll-cta enroll-cta--compact">
+            <span class="enroll-cta__eyebrow">Get certified</span>
+            <a class="btn btn--primary" href="contact.html">Enroll Now</a>
+          </div>
         </div>
       </article>
     `
@@ -303,3 +306,50 @@ if (
   roboIntro.loop = false;
   roboIntro.pause();
 }
+
+// Alumni page: keep testimonial videos in their fixed frame (exit fullscreen if entered)
+(() => {
+  document.querySelectorAll("video.alumni-page-video").forEach((video) => {
+    const leaveFullscreen = () => {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    };
+    video.addEventListener("fullscreenchange", () => {
+      if (document.fullscreenElement === video) leaveFullscreen();
+    });
+    video.addEventListener("webkitfullscreenchange", () => {
+      if (document.webkitFullscreenElement === video) leaveFullscreen();
+    });
+  });
+})();
+
+// Alumni page: featured photo + thumbnail strip
+(() => {
+  const feat = document.querySelector("[data-alumni-feature-img]");
+  const featCap = document.querySelector("[data-alumni-feature-caption]");
+  const thumbs = document.querySelectorAll("[data-alumni-thumb]");
+  if (!feat || thumbs.length === 0) return;
+
+  const setActive = (activeBtn) => {
+    thumbs.forEach((t) => {
+      const on = Boolean(activeBtn && t === activeBtn);
+      t.classList.toggle("is-active", on);
+      t.setAttribute("aria-pressed", String(on));
+    });
+  };
+
+  thumbs.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-full-src");
+      const alt = btn.getAttribute("data-alt") || "";
+      const cap = btn.getAttribute("data-caption") || "";
+      if (src) feat.src = src;
+      feat.alt = alt;
+      if (featCap) featCap.textContent = cap;
+      setActive(btn);
+    });
+  });
+})();
