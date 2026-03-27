@@ -22,7 +22,7 @@ const nav = document.querySelector(".nav");
     const next = theme === "light" ? "dark" : "light";
     toggle.setAttribute("aria-label", `Switch to ${next} theme`);
     toggle.setAttribute("title", `Switch to ${next} theme`);
-    toggle.textContent = theme === "light" ? "☀" : "🌙";
+    toggle.textContent = theme === "light" ? "🌙" : "☀";
   };
 
   toggle.addEventListener("click", () => {
