@@ -541,26 +541,13 @@ img { max-width: 100%; display: block; }
   color: var(--text);
   font-weight: 800;
 }
-.alumni-aws-note__badge-pair {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: flex-start;
-  margin-top: 3px;
-}
 .alumni-aws-note__badge {
+  flex: 0 0 auto;
   width: 52px;
   height: 18px;
   object-fit: contain;
+  margin-top: 3px;
   opacity: 0.95;
-}
-.alumni-aws-note__badge--light {
-  display: none;
-}
-html[data-theme="light"] .alumni-aws-note__badge--dark {
-  display: none;
-}
-html[data-theme="light"] .alumni-aws-note__badge--light {
-  display: block;
 }
 .home-alumni-cert-hint {
   margin: 14px auto 0;
@@ -587,21 +574,7 @@ html[data-theme="light"] .alumni-aws-note__badge--light {
   opacity: 0.98;
 }
 
-/* AWS wordmark SVG uses white ink for dark UI; aws-on-light.svg uses dark ink for light UI */
-.aws-logo-pair {
-  display: inline-flex;
-  align-items: center;
-  vertical-align: middle;
-}
-.aws-logo-pair__light {
-  display: none !important;
-}
-html[data-theme="light"] .aws-logo-pair__dark {
-  display: none !important;
-}
-html[data-theme="light"] .aws-logo-pair__light {
-  display: inline-block !important;
-}
+/* AWS logo src is set in main.js (data-aws-brand): white wordmark on dark UI, dark wordmark on light UI */
 
 /* --- Premium hero look (matches your preferred mock) --- */
 .hero--premium { min-height: 70vh; }

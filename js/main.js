@@ -2,6 +2,18 @@ const menuBtn = document.querySelector("[data-menu-toggle]");
 const menu = document.querySelector("[data-menu]");
 const nav = document.querySelector(".nav");
 
+/** White wordmark for dark UI; dark ink + orange for light UI */
+const AWS_SRC_FOR_DARK_UI = "assets/brands/official/aws.svg";
+const AWS_SRC_FOR_LIGHT_UI = "assets/brands/official/aws-on-light.svg";
+
+function syncAwsBrandLogos() {
+  const theme = document.documentElement.getAttribute("data-theme") || "light";
+  const src = theme === "light" ? AWS_SRC_FOR_LIGHT_UI : AWS_SRC_FOR_DARK_UI;
+  document.querySelectorAll("img[data-aws-brand]").forEach((img) => {
+    img.src = src;
+  });
+}
+
 // Theme selector (light/dark) persisted in localStorage
 (() => {
   const root = document.documentElement;
@@ -9,6 +21,7 @@ const nav = document.querySelector(".nav");
   const savedTheme = window.localStorage.getItem(storageKey);
   const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "light";
   root.setAttribute("data-theme", initialTheme);
+  syncAwsBrandLogos();
 
   if (!nav) return;
 
@@ -38,6 +51,7 @@ const nav = document.querySelector(".nav");
     const next = current === "light" ? "dark" : "light";
     root.setAttribute("data-theme", next);
     window.localStorage.setItem(storageKey, next);
+    syncAwsBrandLogos();
     render();
   });
 
