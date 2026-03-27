@@ -1,6 +1,40 @@
 const menuBtn = document.querySelector("[data-menu-toggle]");
 const menu = document.querySelector("[data-menu]");
 
+// Theme selector (light/dark) persisted in localStorage
+(() => {
+  const root = document.documentElement;
+  const storageKey = "ivy-theme";
+  const savedTheme = window.localStorage.getItem(storageKey);
+  const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+  root.setAttribute("data-theme", initialTheme);
+
+  if (!menu) return;
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "nav__theme-toggle";
+  toggle.setAttribute("aria-live", "polite");
+
+  const render = () => {
+    const theme = root.getAttribute("data-theme") || "dark";
+    const next = theme === "light" ? "dark" : "light";
+    toggle.setAttribute("aria-label", `Switch to ${next} theme`);
+    toggle.textContent = theme === "light" ? "Dark mode" : "Light mode";
+  };
+
+  toggle.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme") || "dark";
+    const next = current === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    window.localStorage.setItem(storageKey, next);
+    render();
+  });
+
+  render();
+  menu.appendChild(toggle);
+})();
+
 if (menuBtn && menu) {
   const setExpanded = (isOpen) => {
     menuBtn.setAttribute("aria-expanded", String(isOpen));
