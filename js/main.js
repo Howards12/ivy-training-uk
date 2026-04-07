@@ -320,10 +320,10 @@ if (alumniCard && alumniImg && alumniCaption) {
     window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const slides = [
+    { src: "assets/alumni/alumni-9.jpeg", caption: "Latest alumni highlight" },
     { src: "assets/alumni/alumni-1.jpg", caption: "Alumni spotlight" },
     { src: "assets/alumni/alumni-2.jpg", caption: "Career progress • real outcomes" },
     { src: "assets/alumni/alumni-3.jpg", caption: "Portfolio-ready projects" },
-    { src: "assets/alumni/student-1.jpg", caption: "Student success story" },
   ];
 
   let idx = 0;

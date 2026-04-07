@@ -472,16 +472,14 @@ img { max-width: 100%; display: block; }
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.10);
   background: rgba(0, 0, 0, 0.35);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   overflow: hidden;
+  min-height: 0;
 }
 .alumni-photo-feature img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: center;
   display: block;
@@ -506,11 +504,14 @@ img { max-width: 100%; display: block; }
   width: 92px;
   height: 69px;
   flex: 0 0 auto;
+  display: grid;
+  place-items: center;
 }
 .alumni-photo-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 .alumni-photo-thumb:hover,
@@ -1032,6 +1033,9 @@ html[data-theme="light"] .alumni-video-frame,
 html[data-theme="light"] .alumni-photo-feature {
   border-color: rgba(16,35,26,0.12);
   background: rgba(255,255,255,0.92);
+}
+html[data-theme="light"] .alumni-photo-thumb {
+  background: rgba(11, 27, 20, 0.06);
 }
 html[data-theme="light"] .input {
   background: rgba(255,255,255,0.95);

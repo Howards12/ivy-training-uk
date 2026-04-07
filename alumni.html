@@ -17,12 +17,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://ivytrainingconsulting.com/alumni.html" />
   <meta property="og:site_name" content="Ivy Training &amp; Consulting UK" />
-  <meta property="og:image" content="http://ivytrainingconsulting.com/assets/hero.jpg" />
+  <meta property="og:image" content="http://ivytrainingconsulting.com/assets/hero-clean.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Alumni pages | Ivy Training & Consulting UK" />
   <meta name="twitter:description" content="Real stories from real people: alumni photos, video testimonials, and AWS certification outcomes through Ivy’s programs." />
-  <meta name="twitter:image" content="http://ivytrainingconsulting.com/assets/hero.jpg" />
+  <meta name="twitter:image" content="http://ivytrainingconsulting.com/assets/hero-clean.jpg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body class="page-alumni">
@@ -49,13 +49,14 @@
   </nav>
 </header>
   <main>
-  <section class="hero hero--compact">
+  <section class="hero hero--compact hero--premium">
     <div class="hero__bg">
-      <img src="assets/hero.jpg" alt="" class="hero__bg-media hero__bg-media--blur" />
-      <div class="hero__overlay"></div>
+      <img src="assets/hero-clean.jpg" alt="" class="hero__bg-media" />
+      <div class="hero__overlay hero__overlay--premium"></div>
+      <div class="hero__bokeh" aria-hidden="true"></div>
     </div>
 
-    <div class="container hero__content">
+    <div class="container hero__content hero__content--left">
       <span class="kicker">Alumni pages</span>
       <h1>Real stories from real people</h1>
       <p>
@@ -93,7 +94,7 @@
               playsinline
               webkit-playsinline
               preload="none"
-              poster="assets/hero.jpg"
+              poster="assets/hero-clean.jpg"
               controlsList="nodownload nofullscreen"
               disablePictureInPicture
             >
@@ -111,7 +112,7 @@
               playsinline
               webkit-playsinline
               preload="none"
-              poster="assets/hero.jpg"
+              poster="assets/hero-clean.jpg"
               controlsList="nodownload nofullscreen"
               disablePictureInPicture
             >
@@ -153,23 +154,35 @@
           <div class="alumni-photo-feature">
             <img
               data-alumni-feature-img
-              src="assets/alumni/alumni-2.jpg"
-              alt="Ivy alumni highlight"
+              src="assets/alumni/alumni-9.jpeg"
+              alt="Ivy alumni — latest highlight"
               loading="lazy"
               decoding="async"
             />
           </div>
-          <p class="muted alumni-photo-caption" data-alumni-feature-caption>Alumni spotlight</p>
+          <p class="muted alumni-photo-caption" data-alumni-feature-caption>Latest alumni highlight</p>
           <div class="alumni-photo-thumbs" role="list" aria-label="Choose alumni photo">
             <button
               type="button"
               class="alumni-photo-thumb is-active"
               data-alumni-thumb
+              data-full-src="assets/alumni/alumni-9.jpeg"
+              data-alt="Ivy alumni — latest highlight"
+              data-caption="Latest alumni highlight"
+              aria-pressed="true"
+              aria-label="Show photo: Latest alumni highlight"
+            >
+              <img src="assets/alumni/alumni-9.jpeg" alt="" loading="lazy" decoding="async" />
+            </button>
+            <button
+              type="button"
+              class="alumni-photo-thumb"
+              data-alumni-thumb
               data-full-src="assets/alumni/alumni-2.jpg"
               data-alt="Ivy alumni highlight"
               data-caption="Alumni spotlight"
-              aria-pressed="true"
-              aria-label="Show default photo: Alumni spotlight"
+              aria-pressed="false"
+              aria-label="Show photo: Alumni spotlight"
             >
               <img src="assets/alumni/alumni-2.jpg" alt="" loading="lazy" decoding="async" />
             </button>
@@ -196,18 +209,6 @@
               aria-label="Show photo: Project showcase"
             >
               <img src="assets/alumni/alumni-3.jpg" alt="" loading="lazy" decoding="async" />
-            </button>
-            <button
-              type="button"
-              class="alumni-photo-thumb"
-              data-alumni-thumb
-              data-full-src="assets/alumni/student-1.jpg"
-              data-alt="Ivy student success"
-              data-caption="Student success"
-              aria-pressed="false"
-              aria-label="Show photo: Student success"
-            >
-              <img src="assets/alumni/student-1.jpg" alt="" loading="lazy" decoding="async" />
             </button>
             <button
               type="button"
