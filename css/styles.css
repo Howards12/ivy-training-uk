@@ -852,6 +852,10 @@ html[data-theme="light"] .testimonial-stars {
   color: var(--gold);
   font-weight: 900;
 }
+.alumni-link .testimonial-stars--alumni-link {
+  justify-content: flex-start;
+  margin: 0;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .alumni__card.is-flipping { animation: none; }
